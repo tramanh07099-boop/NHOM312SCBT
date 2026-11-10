@@ -1,0 +1,1380 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#f5f7ff">
+<title>Nhóm 3 | Lớp 12S</title>
+
+<!-- Tailwind và Font chữ cho các trang cá nhân của thành viên -->
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  // TẮT TÍNH NĂNG RESET CSS CỦA TAILWIND ĐỂ KHÔNG PHÁ VỠ GIAO DIỆN GỐC
+  tailwind.config = {
+    corePlugins: {
+      preflight: false,
+    }
+  }
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Cinzel:wght@600;800&family=Caveat:wght@600;700&family=Comfortaa:wght@600;700&family=Quicksand:wght@500;700&family=Inter:wght@400;600;700;850&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+
+<style>
+/* =========================================================
+   CSS GỐC CỦA TRANG CHỦ INDEX
+   ========================================================= */
+:root{--bg:#f5f7ff;--ink:#17213b;--muted:#66708a;--primary:#5147e8;--mint:#dff8ee;--lav:#e8e6ff;--line:#e7e9f4;--white:#fff;--shadow:0 18px 50px #28306417}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,system-ui,-apple-system,"Segoe UI",sans-serif;line-height:1.6}.wrap{max-width:1120px;margin:auto;padding:22px 24px}nav,.navlinks,.brand,.actions,.sectionhead,.stats,.stat,.footinner{display:flex;align-items:center}nav,.sectionhead,.footinner{justify-content:space-between;gap:20px}.brand{text-decoration:none;font-weight:850;gap:11px;letter-spacing:-.03em}.mark{display:grid;place-items:center;width:42px;height:42px;border-radius:14px;background:var(--primary);color:white;font-size:20px}.navlinks{gap:25px}.navlinks a{color:var(--muted);font-size:14px;text-decoration:none;font-weight:700}.hero{max-width:1120px;margin:25px auto 0;padding:40px 24px 58px;display:grid;grid-template-columns:1.12fr .88fr;gap:40px;align-items:center}.eyebrow{display:inline-block;background:var(--mint);color:#18745a;padding:8px 13px;border-radius:999px;font-size:12px;letter-spacing:.09em;text-transform:uppercase;font-weight:850}h1{font-size:clamp(42px,6vw,72px);line-height:1.03;letter-spacing:-.065em;margin:22px 0 18px}h1 span{color:var(--primary)}.hero p{max-width:510px;color:var(--muted);font-size:17px}.actions{gap:12px;flex-wrap:wrap;margin-top:28px}.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border-radius:13px;padding:12px 16px;text-decoration:none;font-weight:750;font-size:13px;transition:.2s}.btn:hover{transform:translateY(-2px)}.primary{color:white;background:var(--primary);box-shadow:0 10px 22px #5147e82b}.light{background:white;border:1px solid var(--line)}.art{min-height:330px;position:relative;display:grid;place-items:center}.orbit{position:absolute;width:min(100%,350px);aspect-ratio:1;border:1px dashed #b8b6f5;border-radius:50%;animation:rotate 32s linear infinite}.orbit:before,.orbit:after{content:"";position:absolute;border-radius:50%}.orbit:before{width:18px;height:18px;background:#ffbd69;top:35px;left:45px}.orbit:after{width:13px;height:13px;background:#72d9b5;bottom:30px;right:36px}.herocard{position:relative;width:min(82%,300px);background:white;border-radius:28px;padding:28px;box-shadow:var(--shadow);transform:rotate(-3deg)}.cardtop,.cardfoot{display:flex;align-items:center;justify-content:space-between}.spark{display:grid;place-items:center;width:45px;height:45px;background:var(--lav);border-radius:15px;font-size:23px}.tiny{font-size:11px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}.herocard h2{margin:22px 0 3px;font-size:30px}.herocard p{font-size:13px;margin:0}.avatars{display:flex;margin-top:22px}.avatar{width:37px;height:37px;border:3px solid white;border-radius:50%;margin-right:-7px;object-fit:cover}.cardfoot{margin-top:22px;padding-top:17px;border-top:1px solid var(--line);font-size:12px;color:var(--muted)}.cardfoot strong{color:var(--primary)}.stats{max-width:1072px;margin:0 auto;padding:0 24px;display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.stat{background:white;border:1px solid var(--line);border-radius:18px;padding:19px 22px;gap:14px}.staticon{width:43px;height:43px;display:grid;place-items:center;border-radius:14px;background:var(--lav);font-size:20px}.stat:nth-child(2) .staticon{background:var(--mint)}.stat:nth-child(3) .staticon{background:#fff0d9}.stat strong{display:block;font-size:22px;line-height:1.2}.stat span{color:var(--muted);font-size:12px}section.content{max-width:1120px;margin:auto;padding:88px 24px 0}.sectionhead{align-items:end;margin-bottom:26px}.kicker{color:var(--primary);font-weight:850;font-size:12px;letter-spacing:.14em;text-transform:uppercase}.sectiontitle{font-size:clamp(29px,4vw,42px);line-height:1.13;letter-spacing:-.05em;margin:8px 0 0}.subtitle{color:var(--muted);font-size:14px;margin:9px 0 0}.search{width:min(100%,280px);position:relative}.search input{width:100%;border:1px solid var(--line);border-radius:13px;background:white;padding:13px 14px 13px 40px;color:var(--ink);outline:none;font:inherit;font-size:13px}.search input:focus{border-color:#a5a0ff;box-shadow:0 0 0 3px #5147e815}.search span{position:absolute;top:9px;left:13px;font-size:19px}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.assignment{min-height:215px;display:flex;flex-direction:column;padding:22px;border-radius:20px;background:white;border:1px solid var(--line);transition:.2s}.assignment:hover{transform:translateY(-4px);box-shadow:var(--shadow)}.assignment[hidden]{display:none!important}.assignmenttop{display:flex;align-items:center;justify-content:space-between}.docicon{display:grid;place-items:center;width:45px;height:45px;border-radius:14px;background:#e8f0ff;color:#3971db;font-size:22px}.status{background:var(--mint);color:#18745a;border-radius:999px;padding:5px 9px;font-size:10px;font-weight:850;text-transform:uppercase;letter-spacing:.04em}.assignment h3{font-size:21px;margin:19px 0 3px;letter-spacing:-.035em}.assignment p{color:var(--muted);font-size:13px;margin:0 0 18px}.assignment .btn{margin-top:auto;align-self:flex-start;padding:10px 13px;font-size:12px}.empty{display:none;padding:26px;border-radius:16px;background:white;border:1px dashed #cfd2e7;text-align:center;color:var(--muted)}.team{padding-bottom:86px}.members{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}.member{background:white;border:1px solid var(--line);border-radius:20px;text-align:center;padding:25px 12px 22px;cursor:pointer;transition:.2s}.member:hover{transform:translateY(-4px);box-shadow:var(--shadow);border-color:var(--primary)}.memberavatar{width:66px;height:66px;margin:0 auto 14px;border-radius:22px;object-fit:cover;display:block}.member h3{font-size:14px;margin:0}.member p{margin:4px 0 0;color:var(--muted);font-size:11px}.footer{background:#20234a;color:#f4f4ff;padding:30px 24px}.footinner{max-width:1072px;margin:auto}.footer p{margin:0;font-size:12px;color:#c5c7e7}.totop{color:white;text-decoration:none;border:1px solid #555981;padding:9px 13px;border-radius:11px;font-size:12px}@keyframes rotate{to{transform:rotate(360deg)}}@media(max-width:800px){.hero{grid-template-columns:1fr;padding-top:24px;gap:12px}.art{min-height:310px}.grid{grid-template-columns:repeat(2,1fr)}.members{grid-template-columns:repeat(3,1fr)}.sectionhead{align-items:start;flex-direction:column}.search{width:100%}}@media(max-width:520px){.wrap{padding:16px 18px}.navlinks{gap:14px}.navlinks a{font-size:12px}.hero{padding:28px 20px 40px}.hero p{font-size:15px}.art{min-height:290px}.orbit{width:275px}.herocard{width:255px}.stats{padding:0 18px;grid-template-columns:1fr;gap:10px}.stat{padding:14px 17px}section.content{padding:65px 18px 0}.grid{grid-template-columns:1fr}.assignment{min-height:195px}.members{grid-template-columns:repeat(2,1fr)}.team{padding-bottom:60px}.footinner{align-items:flex-start;flex-direction:column}}@media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;animation:none!important;transition:none!important}}
+
+/* =========================================================
+   CSS CHO CÁC TRANG CÁ NHÂN & NÚT QUAY LẠI TỐI ƯU
+   ========================================================= */
+.view-screen { display: none; min-height: 100vh; width: 100%; opacity: 0; transition: opacity 0.4s ease; }
+.view-screen.active { display: block; opacity: 1; }
+
+.back-btn-bar { 
+  position: fixed; 
+  top: max(20px, env(safe-area-inset-top, 20px)); 
+  left: max(20px, env(safe-area-inset-left, 20px)); 
+  z-index: 99999; 
+  display: none; /* Mặc định ẩn trên trang chủ */
+}
+
+/* QUY TẮC BẮT BUỘC HIỂN THỊ NÚT QUAY LẠI KHI Ở TRANG CÁ NHÂN HOẶC BÀI GIẢI */
+body.is-member-view .back-btn-bar {
+  display: flex !important;
+}
+
+.btn-back { 
+  background: rgba(15, 23, 42, 0.95); 
+  backdrop-filter: blur(12px); 
+  -webkit-backdrop-filter: blur(12px);
+  color: #fff; 
+  border: 1px solid rgba(255, 255, 255, 0.3); 
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5); 
+  padding: 11px 20px; 
+  border-radius: 99px; 
+  font-family: Inter, system-ui, -apple-system, sans-serif;
+  font-weight: 700; 
+  font-size: 13px; 
+  display: inline-flex; 
+  align-items: center; 
+  gap: 8px; 
+  cursor: pointer; 
+  transition: all 0.25s ease; 
+  user-select: none;
+}
+.btn-back:hover { 
+  transform: translateY(-2px) scale(1.03); 
+  background: #5147e8; 
+  border-color: #7066ff;
+}
+
+@media (max-width: 640px) {
+  .back-btn-bar {
+    top: max(12px, env(safe-area-inset-top, 12px));
+    left: max(12px, env(safe-area-inset-left, 12px));
+  }
+  .btn-back {
+    padding: 8px 14px;
+    font-size: 12px;
+  }
+}
+
+#view-tram-anh { background: #030308; color: #00ffcc; font-family: 'Press Start 2P', cursive; }
+.arcade-cabinet { max-width: 900px; margin: 40px auto; background: #0d0f1d; border: 4px solid #ff007f; border-radius: 20px; box-shadow: 0 0 50px rgba(255,0,127,0.4); padding: 30px; position: relative; }
+.cyber-canvas { width: 100%; height: 180px; background: #000; border: 2px solid #00ffcc; border-radius: 10px; }
+.arcade-btn { width: 48px; height: 48px; border-radius: 50%; display: inline-grid; place-items: center; font-size: 10px; font-weight: bold; cursor: pointer; box-shadow: 0 5px 0 rgba(0,0,0,0.6); }
+.arcade-btn:active { transform: translateY(3px); box-shadow: 0 2px 0 rgba(0,0,0,0.6); }
+
+#view-hong-giang { background: #0a0606; color: #f3e5ab; font-family: 'Cinzel', serif; position: relative; }
+.projector-beam { position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 100%; max-width: 800px; height: 100%; background: radial-gradient(ellipse at top, rgba(243, 229, 171, 0.15) 0%, transparent 70%); pointer-events: none; }
+
+#view-khanh-ngoc { background: #fbf7f4; color: #3d3434; font-family: 'Caveat', cursive; }
+.flash-overlay { position: fixed; inset: 0; background: #fff; z-index: 99998; opacity: 0; pointer-events: none; transition: opacity 0.1s ease-out; }
+.polaroid-eject { animation: ejectPhoto 1.2s cubic-bezier(0.25, 1, 0.5, 1) forwards; }
+@keyframes ejectPhoto { 0% { transform: translateY(-100px) scale(0.5); opacity: 0; } 100% { transform: translateY(0) scale(1) rotate(-3deg); opacity: 1; } }
+
+#view-bao-linh { background: linear-gradient(180deg, #0b0c1e 0%, #1a1c3b 50%, #2b2d5c 100%); color: #e2e8f0; font-family: 'Comfortaa', cursive; position: relative; overflow: hidden; }
+#artCanvas { position: absolute; inset: 0; width: 100%; height: 100%; z-index: 1; cursor: crosshair; touch-action: none; }
+
+#view-phuc-khang { background: #06120b; color: #d1fae5; font-family: 'Space Grotesk', sans-serif; position: relative; }
+#bioCanvas { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; z-index: 1; }
+</style>
+</head>
+<body id="top">
+
+<!-- NÚT QUAY LẠI TOÀN CẦU (ĐƯỢC ĐIỀU KHIỂN BẰNG CLASS BODY.IS-MEMBER-VIEW) -->
+<div class="back-btn-bar" id="backBar">
+  <button class="btn-back" onclick="showHomeView()">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+    <span>Quay lại trang chủ</span>
+  </button>
+</div>
+
+<!-- ==========================================================================
+     WRAPPER TRANG CHỦ INDEX GỐC
+     ========================================================================== -->
+<div id="view-home" class="view-screen active">
+  <header class="wrap">
+    <nav>
+      <a class="brand" href="#top" onclick="showHomeView()"><span class="mark">✦</span><span style="color:var(--ink)">NHÓM 3 <span style="color:var(--primary)">/</span> 12S</span></a>
+      <div class="navlinks"><a href="#baitap">Bài tập</a><a href="#thanhvien">Thành viên</a></div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div>
+        <span class="eyebrow">✦ Cùng học · Cùng tiến bộ</span>
+        <h1>Xin chào,<br>chúng mình là <span>Nhóm 3.</span></h1>
+        <p>Không gian tổng hợp bài tập và thông tin thành viên của lớp 12S. Chọn bài tập để mở tài liệu và cùng nhau hoàn thành thật tốt nhé!</p>
+        <div class="actions">
+          <a class="btn primary" href="#baitap">📚 Xem bài tập ↗</a>
+          <a class="btn light" href="#thanhvien" style="color:var(--ink)">🦄 Gặp các thành viên</a>
+        </div>
+      </div>
+      <div class="art" aria-label="Thẻ giới thiệu Nhóm 3 lớp 12S">
+        <div class="orbit"></div>
+        <div class="herocard">
+          <div class="cardtop"><div class="spark">✦</div><span class="tiny">Our study team</span></div>
+          <h2>Nhóm 3</h2>
+          <p>Lớp 12S · Học tập cùng nhau</p>
+          <div class="avatars">
+            <img class="avatar" src="https://cdn.phototourl.com/member/2026-10-27-1f813a94-b426-486f-84da-19f7addef8b1.jpg" alt="Trâm Anh">
+            <img class="avatar" src="https://cdn.phototourl.com/member/2026-10-27-4debf0bf-0907-4c33-a069-8fbad011e54f.jpg" alt="Hồng Giang">
+            <img class="avatar" src="https://cdn.phototourl.com/member/2026-11-10-c1a6d8b1-3d73-41ea-b5c8-b380c714c705.jpg" alt="Khánh Ngọc">
+            <img class="avatar" src="https://cdn.phototourl.com/member/2026-10-27-7422e723-5a0d-41f2-9ffe-2bfdc0b277fc.jpg" alt="Bảo Linh">
+            <img class="avatar" src="https://cdn.phototourl.com/member/2026-10-27-ca7e1593-30fe-403a-8821-c168596a6f12.jpg" alt="Phúc Khang">
+          </div>
+          <div class="cardfoot"><span>Thành viên</span><strong>05 người ↗</strong></div>
+        </div>
+      </div>
+    </section>
+
+    <div class="stats">
+      <div class="stat"><div class="staticon">🎓</div><div><strong>12S</strong><span>Lớp học</span></div></div>
+      <div class="stat"><div class="staticon">📘</div><div><strong>9 bài</strong><span>Danh sách bài tập</span></div></div>
+      <div class="stat"><div class="staticon">👥</div><div><strong>5 bạn</strong><span>Thành viên nhóm</span></div></div>
+    </div>
+
+    <section class="content" id="baitap">
+      <div class="sectionhead">
+        <div>
+          <span class="kicker">Learning corner</span>
+          <h2 class="sectiontitle">Danh sách bài tập</h2>
+          <p class="subtitle">Nhấn vào tài liệu để xem nội dung bài làm.</p>
+        </div>
+        <label class="search"><span>⌕</span><input id="searchInput" type="search" placeholder="Tìm bài tập..." aria-label="Tìm bài tập"></label>
+      </div>
+
+      <div class="grid" id="assignmentGrid">
+        <article class="assignment" data-title="Bài 3"><div class="assignmenttop"><div class="docicon">▤</div><span class="status">Có bài giải</span></div><h3>Bài 3</h3><p>Chi tiết bài giải</p><a class="btn primary" href="javascript:void(0)" onclick="showMemberView('view-bai-3')">Mở</a></article>
+        <article class="assignment" data-title="Bài 4"><div class="assignmenttop"><div class="docicon">▤</div><span class="status">Có bài giải</span></div><h3>Bài 4</h3><p>Chi tiết bài giải</p><a class="btn primary" href="javascript:void(0)" onclick="showMemberView('view-bai-4')">Mở</a></article>
+        <article class="assignment" data-title="Bài 5"><div class="assignmenttop"><div class="docicon">▤</div><span class="status">Có bài giải</span></div><h3>Bài 5</h3><p>Chi tiết bài giải</p><a class="btn primary" href="javascript:void(0)" onclick="showMemberView('view-bai-5')">Mở</a></article>
+        <article class="assignment" data-title="Bài 6"><div class="assignmenttop"><div class="docicon">▤</div><span class="status">Có bài giải</span></div><h3>Bài 6</h3><p>Chi tiết bài giải</p><a class="btn primary" href="javascript:void(0)" onclick="showMemberView('view-bai-6')">Mở</a></article>
+        <article class="assignment" data-title="Bài 7"><div class="assignmenttop"><div class="docicon">▤</div><span class="status">Có bài giải</span></div><h3>Bài 7</h3><p>Chi tiết bài giải</p><a class="btn primary" href="javascript:void(0)" onclick="showMemberView('view-bai-7')">Mở</a></article>
+        <article class="assignment" data-title="Bài 8"><div class="assignmenttop"><div class="docicon">▤</div><span class="status">Có bài giải</span></div><h3>Bài 8</h3><p>Chi tiết bài giải</p><a class="btn primary" href="javascript:void(0)" onclick="showMemberView('view-bai-8')">Mở</a></article>
+        <article class="assignment" data-title="Bài 9"><div class="assignmenttop"><div class="docicon">▤</div><span class="status">Có bài giải</span></div><h3>Bài 9</h3><p>Chi tiết bài giải</p><a class="btn primary" href="javascript:void(0)" onclick="showMemberView('view-bai-9')">Mở</a></article>
+        <article class="assignment" data-title="Bài 10"><div class="assignmenttop"><div class="docicon">▤</div><span class="status">Có bài giải</span></div><h3>Bài 10</h3><p>Chi tiết bài giải</p><a class="btn primary" href="javascript:void(0)" onclick="showMemberView('view-bai-10')">Mở</a></article>
+        <article class="assignment" data-title="Bài 11"><div class="assignmenttop"><div class="docicon">▤</div><span class="status">Có bài giải</span></div><h3>Bài 11</h3><p>Chi tiết bài giải</p><a class="btn primary" href="javascript:void(0)" onclick="showMemberView('view-bai-11')">Mở</a></article>
+      </div>
+      <div class="empty" id="emptyState">Không tìm thấy bài tập phù hợp. Thử tìm “Bài 3”, “Bài 10”...</div>
+    </section>
+
+    <section class="content team" id="thanhvien">
+      <div class="sectionhead">
+        <div>
+          <span class="kicker">Meet the team</span>
+          <h2 class="sectiontitle">Thành viên nhóm</h2>
+          <p class="subtitle">Năm thành viên, một tinh thần đồng đội.</p>
+        </div>
+      </div>
+      <div class="members">
+        <article class="member" tabindex="0" role="button" aria-label="Xem trang cá nhân Trâm Anh" onclick="showMemberView('view-tram-anh')" onkeydown="if(event.key==='Enter'||event.key===' ') showMemberView('view-tram-anh')">
+          <img class="memberavatar" src="https://cdn.phototourl.com/member/2026-10-27-1f813a94-b426-486f-84da-19f7addef8b1.jpg" alt="Trâm Anh">
+          <h3>Trâm Anh</h3>
+          <p>Thành viên</p>
+        </article>
+        <article class="member" tabindex="0" role="button" aria-label="Xem trang cá nhân Hồng Giang" onclick="showMemberView('view-hong-giang')" onkeydown="if(event.key==='Enter'||event.key===' ') showMemberView('view-hong-giang')">
+          <img class="memberavatar" src="https://cdn.phototourl.com/member/2026-10-27-4debf0bf-0907-4c33-a069-8fbad011e54f.jpg" alt="Hồng Giang">
+          <h3>Hồng Giang</h3>
+          <p>Thành viên</p>
+        </article>
+        <article class="member" tabindex="0" role="button" aria-label="Xem trang cá nhân Khánh Ngọc" onclick="showMemberView('view-khanh-ngoc')" onkeydown="if(event.key==='Enter'||event.key===' ') showMemberView('view-khanh-ngoc')">
+          <img class="memberavatar" src="https://cdn.phototourl.com/member/2026-11-10-c1a6d8b1-3d73-41ea-b5c8-b380c714c705.jpg" alt="Khánh Ngọc">
+          <h3>P.H.Khánh Ngọc</h3>
+          <p>Thành viên</p>
+        </article>
+        <article class="member" tabindex="0" role="button" aria-label="Xem trang cá nhân Bảo Linh" onclick="showMemberView('view-bao-linh')" onkeydown="if(event.key==='Enter'||event.key===' ') showMemberView('view-bao-linh')">
+          <img class="memberavatar" src="https://cdn.phototourl.com/member/2026-10-27-7422e723-5a0d-41f2-9ffe-2bfdc0b277fc.jpg" alt="Bảo Linh">
+          <h3>Bảo Linh</h3>
+          <p>Thành viên</p>
+        </article>
+        <article class="member" tabindex="0" role="button" aria-label="Xem trang cá nhân Phúc Khang" onclick="showMemberView('view-phuc-khang')" onkeydown="if(event.key==='Enter'||event.key===' ') showMemberView('view-phuc-khang')">
+          <img class="memberavatar" src="https://cdn.phototourl.com/member/2026-10-27-ca7e1593-30fe-403a-8821-c168596a6f12.jpg" alt="Phúc Khang">
+          <h3>Phúc Khang</h3>
+          <p>Nhóm trưởng</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footinner">
+      <div><strong>✦ Nhóm 3 · Lớp 12S</strong><p>Học cùng nhau, tiến bộ cùng nhau.</p></div>
+      <a class="totop" href="#top">↑ Về đầu trang</a>
+    </div>
+  </footer>
+</div>
+
+<!-- ==========================================================================
+     PHẦN HIỂN THỊ BÀI GIẢI CÁC BÀI TẬP (BÀI 3 - BÀI 11) ĐÃ ĐƯỢC CHÈN NỘI DUNG CHÍNH XÁC
+     ========================================================================== -->
+
+<!-- ====== BÀI 3 ====== -->
+<div id="view-bai-3" class="view-screen py-16 px-4">
+  <div class="max-w-3xl mx-auto relative z-10">
+    <h2 class="text-3xl font-bold text-indigo-900 mb-6 border-b-2 border-indigo-100 pb-4">Nội dung Bài 3</h2>
+    
+    <details class="bg-white p-5 rounded-2xl shadow-sm mb-4 border border-indigo-50 cursor-pointer group">
+      <summary class="font-bold text-lg text-indigo-700 outline-none list-none [&::-webkit-details-marker]:hidden flex justify-between items-center">
+        Luyện tập 1 <span class="text-indigo-400 group-open:rotate-180 transition-transform">▼</span>
+      </summary>
+      <div class="mt-4 pt-4 border-t border-indigo-50 text-gray-700 font-sans text-sm leading-relaxed cursor-auto">
+        <p>Để kết nối các máy tính trong phạm vi gia đình thành một mạng, bạn có thể sử dụng một trong những loại thiết bị sau đây:</p>
+        <ul class="list-disc pl-5 space-y-2 mt-2">
+          <li><strong>Router Wi-Fi (Router không dây):</strong> Đây là lựa chọn phổ biến nhất để tạo ra một mạng gia đình. Router Wi-Fi không chỉ cung cấp kết nối internet cho các thiết bị trong gia đình mà còn cho phép chúng kết nối với nhau qua mạng Wi-Fi. Nó cũng có thể có các cổng Ethernet để kết nối các thiết bị có dây như máy tính để bàn, TV thông minh, hoặc máy in.</li>
+          <li><strong>Switch Ethernet:</strong> Nếu bạn có nhu cầu kết nối nhiều thiết bị có dây trong gia đình, bạn có thể sử dụng một switch Ethernet. Switch sẽ cho phép bạn mở rộng cổng Ethernet trên router và kết nối nhiều máy tính hoặc thiết bị có dây khác nhau với mạng.</li>
+          <li><strong>Bộ kết nối Powerline:</strong> Nếu bạn muốn kết nối các thiết bị có dây mà không muốn dây cáp Ethernet chạy qua nhà, bạn có thể sử dụng bộ kết nối Powerline. Bộ kết nối này sử dụng dây điện trong nhà để truyền dữ liệu, cho phép bạn mở rộng mạng mà không cần dây cáp Ethernet.</li>
+        </ul>
+      </div>
+    </details>
+
+    <details class="bg-white p-5 rounded-2xl shadow-sm mb-4 border border-indigo-50 cursor-pointer group">
+      <summary class="font-bold text-lg text-indigo-700 outline-none list-none [&::-webkit-details-marker]:hidden flex justify-between items-center">
+        Luyện tập 2 <span class="text-indigo-400 group-open:rotate-180 transition-transform">▼</span>
+      </summary>
+      <div class="mt-4 pt-4 border-t border-indigo-50 text-gray-700 font-sans text-sm leading-relaxed cursor-auto">
+        <p>Để kết nối máy tính xách tay với Internet thông qua mạng điện thoại di động, bạn có thể sử dụng một trong các phương pháp sau:</p>
+        <p class="mt-2">Kết nối qua điện thoại di động, sử dụng điện thoại làm modem, sử dụng thiết bị định tuyến 3G/4G.</p>
+      </div>
+    </details>
+
+    <details class="bg-white p-5 rounded-2xl shadow-sm mb-4 border border-indigo-50 cursor-pointer group">
+      <summary class="font-bold text-lg text-indigo-700 outline-none list-none [&::-webkit-details-marker]:hidden flex justify-between items-center">
+        Vận dụng 1 <span class="text-indigo-400 group-open:rotate-180 transition-transform">▼</span>
+      </summary>
+      <div class="mt-4 pt-4 border-t border-indigo-50 text-gray-700 font-sans text-sm leading-relaxed cursor-auto">
+        <pre class="bg-gray-50 p-3 rounded-lg text-xs font-mono overflow-x-auto">[Router] ---- [WAN Connection]
+             |
+          [Switch]
+        /   |   \
+   [PC1] [PC2] [Printer]
+        |
+   [Wireless Access Point]
+        |
+   [Wireless Devices]</pre>
+      </div>
+    </details>
+
+    <details class="bg-white p-5 rounded-2xl shadow-sm mb-4 border border-indigo-50 cursor-pointer group">
+      <summary class="font-bold text-lg text-indigo-700 outline-none list-none [&::-webkit-details-marker]:hidden flex justify-between items-center">
+        Vận dụng 2 <span class="text-indigo-400 group-open:rotate-180 transition-transform">▼</span>
+      </summary>
+      <div class="mt-4 pt-4 border-t border-indigo-50 text-gray-700 font-sans text-sm leading-relaxed cursor-auto">
+        <p>Các xe khách đường dài ngày nay thường có dịch vụ Wi-Fi cho hành khách, giúp họ truy cập Internet trong suốt chuyến đi. Điều này được thực hiện thông qua một hệ thống mạng không dây được cài đặt trên xe. Dưới đây là cách thức mà điều này thường được thực hiện:</p>
+        <ul class="list-disc pl-5 space-y-2 mt-2">
+          <li><strong>Modem di động hoặc thiết bị định tuyến di động:</strong> Trên xe khách, thường có một hoặc nhiều thiết bị định tuyến di động (mobile routers) hoặc modem di động được cài đặt. Những thiết bị này thường được kết nối với mạng di động (3G, 4G, hoặc 5G) thông qua một SIM card từ nhà mạng.</li>
+          <li><strong>Bộ khuếch đại tín hiệu và anten:</strong> Để đảm bảo tín hiệu mạng di động mạnh mẽ và ổn định trong suốt chuyến đi, có thể có các bộ khuếch đại tín hiệu và anten được lắp đặt trên xe.</li>
+          <li><strong>Bộ định tuyến trên xe:</strong> Các xe khách thường được trang bị một hoặc nhiều bộ định tuyến (router) để phát sóng mạng Wi-Fi. Bộ định tuyến này được kết nối với modem di động hoặc thiết bị định tuyến di động và tạo ra một mạng Wi-Fi mà hành khách có thể kết nối từ các thiết bị của họ như điện thoại thông minh, máy tính bảng hoặc máy tính xách tay.</li>
+        </ul>
+      </div>
+    </details>
+  </div>
+</div>
+
+<!-- ====== BÀI 4 ====== -->
+<div id="view-bai-4" class="view-screen py-16 px-4">
+  <div class="max-w-3xl mx-auto relative z-10">
+    <h2 class="text-3xl font-bold text-indigo-900 mb-6 border-b-2 border-indigo-100 pb-4">Nội dung Bài 4</h2>
+    
+    <details class="bg-white p-5 rounded-2xl shadow-sm mb-4 border border-indigo-50 cursor-pointer group">
+      <summary class="font-bold text-lg text-indigo-700 outline-none list-none [&::-webkit-details-marker]:hidden flex justify-between items-center">
+        Luyện tập 1 <span class="text-indigo-400 group-open:rotate-180 transition-transform">▼</span>
+      </summary>
+      <div class="mt-4 pt-4 border-t border-indigo-50 text-gray-700 font-sans text-sm leading-relaxed cursor-auto">
+        <p>Quy trình gọi điện thoại bằng máy bàn tuân theo các quy tắc cụ thể, tương tự như một giao thức trong mạng máy tính. Dưới đây là các quy tắc chính:</p>
+        <ul class="list-disc pl-5 space-y-2 mt-2">
+          <li><strong>Nhấc ống nghe:</strong> Bước này bắt đầu khi người dùng nhấc ống nghe từ vị trí treo (hoặc ống nghe đặt trên máy). Hành động này gửi một tín hiệu tới trung tâm dịch vụ điện thoại (trung tâm chuyển mạch) để bắt đầu một cuộc gọi mới.</li>
+          <li><strong>Quay số:</strong> Người dùng quay các số điện thoại mong muốn trên bàn phím số của điện thoại. Mỗi số được quay tạo ra một tín hiệu điện thoại tương ứng.</li>
+          <li><strong>Phát nhạc chờ (nếu cần):</strong> Trong một số trường hợp, khi đang chờ máy bên kia nhận cuộc gọi, người gọi có thể nghe phát nhạc chờ hoặc thông báo khác. Điều này đảm bảo rằng người gọi biết cuộc gọi đang được xử lý.</li>
+          <li><strong>Reo chuông (nếu máy bên kia nhấc ống):</strong> Nếu máy bên kia nhấc ống trong quá trình gọi, điện thoại của người gọi sẽ reo chuông để báo hiệu rằng cuộc gọi đã được kết nối và người nhận đã nhấc ống.</li>
+          <li><strong>Nói chuyện:</strong> Sau khi cuộc gọi đã được kết nối và hai bên đã nhấc ống, họ có thể bắt đầu nói chuyện.</li>
+          <li><strong>Kết thúc cuộc gọi:</strong> Khi cuộc trò chuyện kết thúc, người gọi có thể đặt ống nghe vào vị trí treo hoặc nhấn nút kết thúc cuộc gọi trên điện thoại để kết thúc cuộc gọi.</li>
+          <li><strong>Báo lỗi (nếu có):</strong> Trong trường hợp có lỗi xảy ra trong quá trình gọi điện thoại, điện thoại có thể phát ra các tín hiệu báo lỗi như âm thanh kêu hoặc thông báo trên màn hình.</li>
+        </ul>
+        <p class="mt-2 text-gray-600 italic">Các quy tắc này giúp đảm bảo rằng việc gọi điện thoại diễn ra một cách mạch lạc và đáng tin cậy, tương tự như các giao thức trong mạng máy tính đảm bảo truyền dữ liệu một cách tin cậy và hiệu quả.</p>
+      </div>
+    </details>
+
+    <details class="bg-white p-5 rounded-2xl shadow-sm mb-4 border border-indigo-50 cursor-pointer group">
+      <summary class="font-bold text-lg text-indigo-700 outline-none list-none [&::-webkit-details-marker]:hidden flex justify-between items-center">
+        Luyện tập 2 <span class="text-indigo-400 group-open:rotate-180 transition-transform">▼</span>
+      </summary>
+      <div class="mt-4 pt-4 border-t border-indigo-50 text-gray-700 font-sans text-sm leading-relaxed cursor-auto space-y-3">
+        <img src="https://cdn.phototourl.com/member/2026-11-10-9208fa61-df65-4a0d-a634-ee82c08683fb.jpg" alt="Minh hoạ Bài 4" class="rounded-lg max-w-full h-auto shadow-sm">
+      </div>
+    </details>
+
+    <details class="bg-white p-5 rounded-2xl shadow-sm mb-4 border border-indigo-50 cursor-pointer group">
+      <summary class="font-bold text-lg text-indigo-700 outline-none list-none [&::-webkit-details-marker]:hidden flex justify-between items-center">
+        Vận dụng 1 <span class="text-indigo-400 group-open:rotate-180 transition-transform">▼</span>
+      </summary>
+      <div class="mt-4 pt-4 border-t border-indigo-50 text-gray-700 font-sans text-sm leading-relaxed cursor-auto">
+        <p class="font-bold">Lợi ích của việc sử dụng tên miền thay thế cho địa chỉ IP:</p>
+        <ul class="list-disc pl-5 space-y-2 mt-2">
+          <li><strong>Dễ nhớ:</strong> Tên miền thường dễ nhớ hơn các địa chỉ IP dài và phức tạp.</li>
+          <li><strong>Phân cấp:</strong> Tên miền có thể được tổ chức theo cấp độ, từ tên miền cấp cao nhất (top-level domain) đến tên miền cấp thấp hơn, giúp dễ dàng quản lý và nhận diện.</li>
+          <li><strong>Linh hoạt:</strong> Khi cần thay đổi địa chỉ IP của một tài nguyên trên mạng, chỉ cần cập nhật một bản ghi DNS thay vì phải thay đổi tất cả các tham chiếu đến địa chỉ IP.</li>
+        </ul>
+        <p class="font-bold mt-4">Các lớp tên miền:</p>
+        <ul class="list-disc pl-5 space-y-2 mt-2">
+          <li><strong>Top-Level Domain (TLD):</strong> Là phần cuối cùng của tên miền, như ".com", ".org", ".net", ".edu", ".vn"...</li>
+          <li><strong>Second-Level Domain (SLD):</strong> Là phần trước TLD, thường là tên của tổ chức, công ty, hoặc cá nhân, như "example" trong "example.com".</li>
+          <li><strong>Subdomain:</strong> Là các phần con của tên miền, được thêm vào trước SLD, như "blog.example.com", "mail.example.com".</li>
+        </ul>
+        <p class="font-bold mt-4">Tổ chức phụ trách việc cấp tên miền ở Việt Nam:</p>
+        <p class="mt-1">Tại Việt Nam, việc cấp và quản lý tên miền Internet thuộc trách nhiệm của Cục Phát thanh Truyền hình và Thông tin Điện tử (Bộ Thông tin và Truyền thông) thông qua Trung tâm Internet Việt Nam (VNNIC).</p>
+        <p class="mt-1">VNNIC là tổ chức chính thức được ủy quyền quản lý tên miền cấp cao nhất ".vn" cũng như các tên miền cấp thấp hơn trong tên miền quốc gia Việt Nam.</p>
+      </div>
+    </details>
+
+    <details class="bg-white p-5 rounded-2xl shadow-sm mb-4 border border-indigo-50 cursor-pointer group">
+      <summary class="font-bold text-lg text-indigo-700 outline-none list-none [&::-webkit-details-marker]:hidden flex justify-between items-center">
+        Vận dụng 2 <span class="text-indigo-400 group-open:rotate-180 transition-transform">▼</span>
+      </summary>
+      <div class="mt-4 pt-4 border-t border-indigo-50 text-gray-700 font-sans text-sm leading-relaxed cursor-auto">
+        <p><strong>Ping</strong> là một công cụ được sử dụng để kiểm tra kết nối mạng giữa hai thiết bị bằng cách gửi các gói tin ICMP Echo Request và chờ đợi các gói tin ICMP Echo Reply phản hồi từ thiết bị đích. Lệnh ping (ping latency) là thời gian mà một gói tin mất để đi từ máy gửi đến máy nhận và quay lại. Nó thường được đo bằng mili giây (ms).</p>
+        <p class="mt-2">Để thực hiện lệnh ping trên hệ điều hành Windows hoặc Linux, bạn có thể mở cửa sổ dòng lệnh và nhập lệnh ping theo cú pháp:</p>
+        <pre class="bg-gray-50 p-3 rounded-lg text-xs font-mono mt-1">ping [địa chỉ IP hoặc tên miền]</pre>
+        <p class="mt-2">Ví dụ:</p>
+        <pre class="bg-gray-50 p-3 rounded-lg text-xs font-mono mt-1">ping www.google.com</pre>
+      </div>
+    </details>
+  </div>
+</div>
+
+<!-- ====== BÀI 5 ====== -->
+<div id="view-bai-5" class="view-screen py-16 px-4">
+  <div class="max-w-3xl mx-auto relative z-10">
+    <h2 class="text-3xl font-bold text-indigo-900 mb-6 border-b-2 border-indigo-100 pb-4">Nội dung Bài 5</h2>
+    
+    <details class="bg-white p-5 rounded-2xl shadow-sm mb-4 border border-indigo-50 cursor-pointer group">
+      <summary class="font-bold text-lg text-indigo-700 outline-none list-none [&::-webkit-details-marker]:hidden flex justify-between items-center">
+        Luyện tập 1 <span class="text-indigo-400 group-open:rotate-180 transition-transform">▼</span>
+      </summary>
+      <div class="mt-4 pt-4 border-t border-indigo-50 text-gray-700 font-sans text-sm leading-relaxed cursor-auto">
+        <p class="font-bold">Quy trình thực hiện các bước theo yêu cầu:</p>
+        <p class="mt-1 font-semibold">1. Lập các nhóm:</p>
+        <ul class="list-disc pl-5 space-y-1">
+          <li>Nhóm 1: Máy A1 và Máy B1</li>
+          <li>Nhóm 2: Máy A2 và Máy B2</li>
+        </ul>
+        <p class="mt-3 font-semibold">2. Thực hiện thực hành:</p>
+        <p class="mt-1"><strong>a) Máy A chia sẻ tệp và thư mục với quyền read:</strong></p>
+        <p class="text-xs text-gray-600 pl-4">Trên Máy A1: Tạo một thư mục và thêm vào ít nhất một tệp văn bản. Chia sẻ thư mục với quyền read.<br>Trên Máy B1: Kết nối đến máy A1 và truy cập vào thư mục chia sẻ. Kiểm tra xem các tệp có thể đọc được nhưng không thể sửa được.</p>
+        <p class="mt-2"><strong>b) Máy A thiết lập lại chế độ chia sẻ với quyền read/write:</strong></p>
+        <p class="text-xs text-gray-600 pl-4">Trên Máy A1: Chỉnh sửa cài đặt chia sẻ để cung cấp quyền read/write.<br>Trên Máy B1: Kiểm tra lại việc sử dụng các tệp chia sẻ để thấy có thể đọc và sửa được.</p>
+        <p class="mt-2"><strong>c) Máy A hủy bỏ chia sẻ:</strong></p>
+        <p class="text-xs text-gray-600 pl-4">Trên Máy A1: Hủy bỏ chia sẻ thư mục.<br>Trên Máy B1: Kiểm tra để thấy rằng thư mục không còn được chia sẻ nữa.</p>
+        <p class="mt-2"><strong>d) Đảo vai trò:</strong> Thực hiện tương tự như trên nhưng lần này Máy B2 chia sẻ và Máy A2 kiểm tra.</p>
+      </div>
+    </details>
+
+    <details class="bg-white p-5 rounded-2xl shadow-sm mb-4 border border-indigo-50 cursor-pointer group">
+      <summary class="font-bold text-lg text-indigo-700 outline-none list-none [&::-webkit-details-marker]:hidden flex justify-between items-center">
+        Luyện tập 2 <span class="text-indigo-400 group-open:rotate-180 transition-transform">▼</span>
+      </summary>
+      <div class="mt-4 pt-4 border-t border-indigo-50 text-gray-700 font-sans text-sm leading-relaxed cursor-auto">
+        <p>Để thực hiện thực hành chia sẻ máy in giữa hai nhóm học sinh, các bước cần thực hiện như sau:</p>
+        <ul class="list-disc pl-5 space-y-2 mt-2">
+          <li><strong>Bước 1: Chuẩn bị máy in và máy tính</strong><br>Nhóm 1: Máy in của nhóm 1, một máy tính của nhóm 1 để chia sẻ máy in.<br>Nhóm 2: Một máy tính của nhóm 2 để sử dụng máy in.</li>
+          <li><strong>Bước 2: Chia sẻ máy in</strong><br>Nhóm 1: Trên máy tính của nhóm 1, chia sẻ máy in sao cho máy tính của nhóm 2 có thể truy cập và sử dụng được.<br>Nhóm 2: Kết nối máy tính của nhóm 2 đến máy in đã được chia sẻ từ nhóm 1.</li>
+          <li><strong>Bước 3: Sử dụng máy in</strong><br>Nhóm 2 sử dụng máy tính của mình để in các tài liệu hoặc hình ảnh bằng máy in đã được chia sẻ từ nhóm 1.</li>
+          <li><strong>Bước 4: Đổi vai trò</strong> Sau khi nhóm 2 sử dụng xong, đảo vai trò giữa hai nhóm.</li>
+          <li><strong>Bước 5: Thực hiện lại từ đầu</strong> Nhóm 2 chia sẻ máy in từ máy tính của mình để nhóm 1 sử dụng và ngược lại.</li>
+        </ul>
+      </div>
+    </details>
+
+    <details class="bg-white p-5 rounded-2xl shadow-sm mb-4 border border-indigo-50 cursor-pointer group">
+      <summary class="font-bold text-lg text-indigo-700 outline-none list-none [&::-webkit-details-marker]:hidden flex justify-between items-center">
+        Vận dụng <span class="text-indigo-400 group-open:rotate-180 transition-transform">▼</span>
+      </summary>
+      <div class="mt-4 pt-4 border-t border-indigo-50 text-gray-700 font-sans text-sm leading-relaxed cursor-auto">
+        <p class="font-bold">Thực hiện việc chia sẻ toàn bộ một đĩa trên Windows:</p>
+        <ul class="list-disc pl-5 space-y-2 mt-2">
+          <li><strong>Chuẩn bị:</strong> Đảm bảo bạn đã đăng nhập vào máy tính với quyền quản trị. Kiểm tra đĩa mà bạn muốn chia sẻ.</li>
+          <li><strong>Chia sẻ đĩa:</strong>
+            <ul class="list-circle pl-5 mt-1 space-y-1 text-xs">
+              <li>Nhấp chuột phải vào biểu tượng đĩa mà bạn muốn chia sẻ (thường là ổ đĩa C: hoặc D:).</li>
+              <li>Chọn "Properties" từ menu xuất hiện.</li>
+              <li>Trong cửa sổ Properties, chọn tab "Sharing".</li>
+              <li>Nhấn vào nút "Advanced Sharing...".</li>
+              <li>Trong cửa sổ mới xuất hiện, đánh dấu vào hộp "Share this folder".</li>
+              <li>Đặt tên chia sẻ (Share name) cho đĩa, ví dụ "Drive_Share".</li>
+              <li>Nhấn "Permissions" để cấu hình quyền truy cập cho người dùng trên mạng.</li>
+              <li>Sau khi cấu hình xong, nhấn "OK" để đóng cửa sổ Permissions, sau đó nhấn "OK" một lần nữa để hoàn tất việc chia sẻ đĩa.</li>
+            </ul>
+          </li>
+          <li><strong>Kiểm tra trên mạng:</strong> Trên máy tính khác trong cùng mạng LAN, mở File Explorer và nhập địa chỉ <code>[địa chỉ IP hoặc tên máy tính chứa đĩa chia sẻ]\[tên chia sẻ]</code> vào thanh địa chỉ và nhấn Enter để truy cập.</li>
+        </ul>
+      </div>
+    </details>
+  </div>
+</div>
+
+<!-- ====== BÀI 6 ====== -->
+<div id="view-bai-6" class="view-screen py-16 px-4">
+  <div class="max-w-3xl mx-auto relative z-10">
+    <h2 class="text-3xl font-bold text-indigo-900 mb-6 border-b-2 border-indigo-100 pb-4">Nội dung Bài 6</h2>
+    
+    <details class="bg-white p-5 rounded-2xl shadow-sm mb-4 border border-indigo-50 cursor-pointer group">
+      <summary class="font-bold text-lg text-indigo-700 outline-none list-none [&::-webkit-details-marker]:hidden flex justify-between items-center">
+        Luyện tập 1 <span class="text-indigo-400 group-open:rotate-180 transition-transform">▼</span>
+      </summary>
+      <div class="mt-4 pt-4 border-t border-indigo-50 text-gray-700 font-sans text-sm leading-relaxed cursor-auto">
+        <p>Em đã từng trải qua một tình huống nhắn tin trên Facebook để trao đổi bài tập với một người bạn cùng lớp. Trong trường hợp này, chúng em đều đang học cùng một môn học và có bài tập cần làm, nhưng do lịch trình bận rộn nên không thể gặp mặt trực tiếp để thảo luận.</p>
+        <p class="mt-2">Thay vì sử dụng email hoặc tin nhắn văn bản thông thường, chúng em quyết định sử dụng tính năng nhắn tin trên Facebook để trao đổi ý kiến và giúp đỡ nhau về các bài tập.</p>
+        <p class="mt-2">Trong cuộc trò chuyện, chúng em đã chia sẻ các câu hỏi và thắc mắc liên quan đến bài tập, trao đổi ý kiến về cách giải quyết và giúp đỡ nhau vượt qua các khó khăn trong quá trình làm bài. Bằng cách này, chúng em có thể hỗ trợ lẫn nhau một cách thuận tiện và linh hoạt mà không cần phải gặp mặt trực tiếp.</p>
+        <p class="mt-2">Cuộc trò chuyện qua tin nhắn trên Facebook đã giúp chúng em hoàn thành bài tập một cách hiệu quả, đồng thời tạo ra một môi trường học tập cộng đồng và hỗ trợ lẫn nhau. Đây là một ví dụ minh họa cho sự linh hoạt và tiện lợi của việc sử dụng các phương tiện truyền thông xã hội để giao tiếp và học tập.</p>
+      </div>
+    </details>
+
+    <details class="bg-white p-5 rounded-2xl shadow-sm mb-4 border border-indigo-50 cursor-pointer group">
+      <summary class="font-bold text-lg text-indigo-700 outline-none list-none [&::-webkit-details-marker]:hidden flex justify-between items-center">
+        Luyện tập 2 <span class="text-indigo-400 group-open:rotate-180 transition-transform">▼</span>
+      </summary>
+      <div class="mt-4 pt-4 border-t border-indigo-50 text-gray-700 font-sans text-sm leading-relaxed cursor-auto">
+        <p class="font-bold">Một số ví dụ minh họa cho việc vận dụng các lợi ích của giao tiếp trong không gian mạng để tạo sự tiện lợi cho công việc hoặc cuộc sống:</p>
+        <ul class="list-disc pl-5 space-y-2 mt-2">
+          <li><strong>Học trực tuyến:</strong> Việc tham gia các khóa học trực tuyến qua các nền tảng giáo dục như Coursera, Udemy, hay Khan Academy giúp mọi người tiếp cận kiến thức linh hoạt từ bất kỳ đâu, mọi lúc mọi nơi.</li>
+          <li><strong>Làm việc từ xa:</strong> Công nghệ giao tiếp như email, tin nhắn, và cuộc họp trực tuyến như Zoom hay Microsoft Teams cho phép nhân viên làm việc từ xa mà vẫn giao tiếp và làm việc cùng nhau hiệu quả.</li>
+          <li><strong>Mua sắm trực tuyến:</strong> Các nền tảng mua sắm trực tuyến như Amazon, eBay, và Lazada cung cấp sự thuận tiện cho việc mua sắm mọi thứ từ quần áo, đồ điện tử, đến đồ gia dụng mà không cần ra ngoài tốn thời gian.</li>
+          <li><strong>Giao tiếp với người thân và bạn bè:</strong> Ứng dụng nhắn tin và gọi video như Messenger, WhatsApp, và Skype cho phép liên lạc với người thân, bạn bè ở xa dễ dàng, tiết kiệm chi phí và thời gian di chuyển.</li>
+        </ul>
+      </div>
+    </details>
+
+    <details class="bg-white p-5 rounded-2xl shadow-sm mb-4 border border-indigo-50 cursor-pointer group">
+      <summary class="font-bold text-lg text-indigo-700 outline-none list-none [&::-webkit-details-marker]:hidden flex justify-between items-center">
+        Vận dụng <span class="text-indigo-400 group-open:rotate-180 transition-transform">▼</span>
+      </summary>
+      <div class="mt-4 pt-4 border-t border-indigo-50 text-gray-700 font-sans text-sm leading-relaxed cursor-auto">
+        <div class="bg-gray-50 p-4 rounded-xl border border-gray-200 font-mono text-xs space-y-2">
+          <p class="font-bold text-indigo-700">Subject: Yêu cầu Mượn Vở Trong Tình Huống Khẩn Cấp</p>
+          <p>Chào bạn,</p>
+          <p>Mình viết email này để xin lỗi vì đã phải làm phiền bạn, nhưng mình đang gặp phải một tình huống khẩn cấp và cần sự giúp đỡ của bạn.</p>
+          <p>Như bạn biết, mình đã bị ốm suốt mấy ngày qua và không thể đến trường được. Vào ngày mai, lịch thi của chúng ta sẽ diễn ra và mình muốn mượn vở ghi của bạn để chuẩn bị cho bài kiểm tra. Vì vậy, mình muốn hỏi bạn liệu có thể mượn vở của bạn được không? Mình sẽ giữ gìn nó cẩn thận và sẽ trả lại ngay sau khi sử dụng xong.</p>
+          <p>Rất mong bạn có thể cho mình mượn vở. Nếu bạn đồng ý, hãy trả lời cho mình biết nhé! Cảm ơn bạn rất nhiều. Mong sớm nhận được phản hồi từ bạn.</p>
+          <p>Trân trọng,<br>[Tên của bạn]</p>
+        </div>
+      </div>
+    </details>
+  </div>
+</div>
+
+<!-- ====== BÀI 7 ====== -->
+<div id="view-bai-7" class="view-screen py-16 px-4">
+  <div class="max-w-3xl mx-auto relative z-10">
+    <h2 class="text-3xl font-bold text-indigo-900 mb-6 border-b-2 border-indigo-100 pb-4">Nội dung Bài 7</h2>
+    
+    <details class="bg-white p-5 rounded-2xl shadow-sm mb-4 border border-indigo-50 cursor-pointer group">
+      <summary class="font-bold text-lg text-indigo-700 outline-none list-none [&::-webkit-details-marker]:hidden flex justify-between items-center">
+        Luyện tập 1 <span class="text-indigo-400 group-open:rotate-180 transition-transform">▼</span>
+      </summary>
+      <div class="mt-4 pt-4 border-t border-indigo-50 text-gray-700 font-sans text-sm leading-relaxed cursor-auto">
+        <pre class="bg-gray-50 p-3 rounded-lg text-xs font-mono overflow-x-auto">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Phần tử img&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;img src="example.jpg" alt="Mô tả hình ảnh"&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+      </div>
+    </details>
+
+    <details class="bg-white p-5 rounded-2xl shadow-sm mb-4 border border-indigo-50 cursor-pointer group">
+      <summary class="font-bold text-lg text-indigo-700 outline-none list-none [&::-webkit-details-marker]:hidden flex justify-between items-center">
+        Luyện tập 2 <span class="text-indigo-400 group-open:rotate-180 transition-transform">▼</span>
+      </summary>
+      <div class="mt-4 pt-4 border-t border-indigo-50 text-gray-700 font-sans text-sm leading-relaxed cursor-auto">
+        <pre class="bg-gray-50 p-3 rounded-lg text-xs font-mono overflow-x-auto">&lt;!DOCTYPE html&gt;
+&lt;html lang="vi"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Văn bản về sen&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;p&gt;"Trong đầm gì đẹp bằng sen, lá xanh bông trắng lại chen nhị vàng."&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+        <p class="font-bold mt-3">Cây thông tin:</p>
+        <pre class="bg-gray-50 p-3 rounded-lg text-xs font-mono overflow-x-auto">&lt;html&gt;
+  |
+  ├── &lt;head&gt;
+  |     |
+  |     ├── &lt;meta charset="UTF-8"&gt;
+  |     ├── &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+  |     └── &lt;title&gt;Văn bản về sen&lt;/title&gt;
+  |
+  └── &lt;body&gt;
+        |
+        └── &lt;p&gt;"Trong đầm gì đẹp bằng sen, lá xanh bông trắng lại chen nhị vàng."&lt;/p&gt;</pre>
+      </div>
+    </details>
+
+    <details class="bg-white p-5 rounded-2xl shadow-sm mb-4 border border-indigo-50 cursor-pointer group">
+      <summary class="font-bold text-lg text-indigo-700 outline-none list-none [&::-webkit-details-marker]:hidden flex justify-between items-center">
+        Vận dụng 1 <span class="text-indigo-400 group-open:rotate-180 transition-transform">▼</span>
+      </summary>
+      <div class="mt-4 pt-4 border-t border-indigo-50 text-gray-700 font-sans text-sm leading-relaxed cursor-auto">
+        <p>Một số trang web phổ biến cung cấp các công cụ soạn thảo HTML trực tuyến:</p>
+        <ul class="list-disc pl-5 space-y-1 mt-2">
+          <li>JSFiddle (<a href="https://jsfiddle.net/" target="_blank" class="text-indigo-600 underline">https://jsfiddle.net/</a>)</li>
+          <li>CodePen</li>
+          <li>JS Bin (<a href="https://jsbin.com/" target="_blank" class="text-indigo-600 underline">https://jsbin.com/</a>)</li>
+          <li>Repl.it (<a href="https://replit.com/" target="_blank" class="text-indigo-600 underline">https://replit.com/</a>)</li>
+        </ul>
+      </div>
+    </details>
+
+    <details class="bg-white p-5 rounded-2xl shadow-sm mb-4 border border-indigo-50 cursor-pointer group">
+      <summary class="font-bold text-lg text-indigo-700 outline-none list-none [&::-webkit-details-marker]:hidden flex justify-between items-center">
+        Vận dụng 2 <span class="text-indigo-400 group-open:rotate-180 transition-transform">▼</span>
+      </summary>
+      <div class="mt-4 pt-4 border-t border-indigo-50 text-gray-700 font-sans text-sm leading-relaxed cursor-auto">
+        <pre class="bg-gray-50 p-3 rounded-lg text-xs font-mono overflow-x-auto">&lt;!DOCTYPE html&gt;
+&lt;html lang="vi"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Lịch sử phát triển HTML&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;&lt;strong&gt;Lịch sử phát triển HTML&lt;/strong&gt;&lt;/h1&gt;
+    &lt;p&gt;Các chuẩn HTML của trang web hiện nay được nhà vật lý Tim Berners-Lee đưa ra lần đầu tiên vào những năm 1990 của thế kỷ XX tại trung tâm vật lý hạt nhân CERN.&lt;/p&gt;
+    &lt;p&gt;Ý tưởng ban đầu của Berners-Lee là muốn thiết lập một chuẩn chung để thể hiện và chia sẻ các văn bản có thể trao đổi bên trong cơ quan CERN.&lt;/p&gt;
+    &lt;p&gt;Hình ảnh sau là sơ đồ thông tin mà Tim Berners-Lee đưa ra lần đầu tiên để minh họa cho ý tưởng của mình. Trong sơ đồ này lần đầu tiên xuất hiện cụm từ “hypertext” (siêu văn bản).&lt;/p&gt;
+    &lt;img src="đường_dẫn_đến_hình_ảnh" alt="Sơ đồ Hypertext của Tim Berners-Lee" style="max-width: 100%; height: auto;"&gt;
+    &lt;p&gt;Phiên bản đầu tiên của HTML được thiết lập vào cuối năm 1991 mang tên “các thẻ HTML” văn bản này do chính Tim Berners-Lee biên soạn.&lt;/p&gt;
+    &lt;p&gt;Từ đó các phiên bản tiếp theo của HTML lần lượt ra đời cùng với sự phát triển của công nghệ internet.&lt;/p&gt;
+    &lt;p&gt;Phiên bản hiện tại là HTML5, ra đời năm 2014.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+      </div>
+    </details>
+  </div>
+</div>
+
+<!-- ====== BÀI 8 ====== -->
+<div id="view-bai-8" class="view-screen py-16 px-4">
+  <div class="max-w-3xl mx-auto relative z-10">
+    <h2 class="text-3xl font-bold text-indigo-900 mb-6 border-b-2 border-indigo-100 pb-4">Nội dung Bài 8</h2>
+    
+    <details class="bg-white p-5 rounded-2xl shadow-sm mb-4 border border-indigo-50 cursor-pointer group">
+      <summary class="font-bold text-lg text-indigo-700 outline-none list-none [&::-webkit-details-marker]:hidden flex justify-between items-center">
+        Luyện tập 1 <span class="text-indigo-400 group-open:rotate-180 transition-transform">▼</span>
+      </summary>
+      <div class="mt-4 pt-4 border-t border-indigo-50 text-gray-700 font-sans text-sm leading-relaxed cursor-auto">
+        <pre class="bg-gray-50 p-3 rounded-lg text-xs font-mono overflow-x-auto">&lt;p&gt;&lt;strong&gt;Thẻ strong&lt;/strong&gt; vào &lt;em&gt;thẻ em&lt;/em&gt; được sử dụng để nhấn mạnh vào nội dung trong phần tử. Thẻ &lt;strong&gt;B&lt;/strong&gt; chỉ có tác dụng in đậm văn bản.&lt;/p&gt;</pre>
+      </div>
+    </details>
+
+    <details class="bg-white p-5 rounded-2xl shadow-sm mb-4 border border-indigo-50 cursor-pointer group">
+      <summary class="font-bold text-lg text-indigo-700 outline-none list-none [&::-webkit-details-marker]:hidden flex justify-between items-center">
+        Luyện tập 2 <span class="text-indigo-400 group-open:rotate-180 transition-transform">▼</span>
+      </summary>
+      <div class="mt-4 pt-4 border-t border-indigo-50 text-gray-700 font-sans text-sm leading-relaxed cursor-auto">
+        <pre class="bg-gray-50 p-3 rounded-lg text-xs font-mono overflow-x-auto">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;INTERNET TỐC ĐỘ CAO&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;h1&gt;INTERNET TỐC ĐỘ CAO&lt;/h1&gt;
+&lt;p&gt;&lt;em&gt;Dịch vụ Internet tốc độ cao là dịch vụ internet cáp quang chất lượng cao, ổn định, giá cả hợp lí.&lt;/em&gt;&lt;/p&gt;
+&lt;h2&gt;&lt;strong&gt;Các tính năng nổi bật:&lt;/strong&gt;&lt;/h2&gt;
+&lt;ul&gt;
+    &lt;li&gt;Tốc độ siêu cao từ 150 MBps trở lên&lt;/li&gt;
+    &lt;li&gt;Lắp đặt nhanh chóng trong 24h&lt;/li&gt;
+    &lt;li&gt;Phù hợp với cá nhân/Hộ gia đình&lt;/li&gt;
+    &lt;li&gt;Tặng modem 2 băng tần&lt;/li&gt;
+    &lt;li&gt;Miễn phí lắp đặt hỗ trợ 24/7&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+      </div>
+    </details>
+
+    <details class="bg-white p-5 rounded-2xl shadow-sm mb-4 border border-indigo-50 cursor-pointer group">
+      <summary class="font-bold text-lg text-indigo-700 outline-none list-none [&::-webkit-details-marker]:hidden flex justify-between items-center">
+        Vận dụng 1 <span class="text-indigo-400 group-open:rotate-180 transition-transform">▼</span>
+      </summary>
+      <div class="mt-4 pt-4 border-t border-indigo-50 text-gray-700 font-sans text-sm leading-relaxed cursor-auto">
+        <ul class="list-disc pl-5 space-y-1">
+          <li><strong>Chọn màu cụ thể:</strong> Trước tiên, bạn cần quyết định màu sắc bạn muốn sử dụng cho tiêu đề của bài thơ.</li>
+          <li><strong>Chọn ảnh nền:</strong> Chọn một bức ảnh phù hợp để sử dụng làm nền cho tiêu đề. Bạn cũng có thể sử dụng một ảnh trắng đơn giản và thêm màu sắc sau đó.</li>
+          <li><strong>Tạo tiêu đề trong HTML:</strong> Sử dụng thẻ <code>&lt;h1&gt;</code>, <code>&lt;h2&gt;</code>, hoặc <code>&lt;h3&gt;</code> để tạo tiêu đề của bài thơ.</li>
+          <li>Thêm ảnh nền và thuộc tính color để thay đổi màu chữ.</li>
+        </ul>
+      </div>
+    </details>
+
+    <details class="bg-white p-5 rounded-2xl shadow-sm mb-4 border border-indigo-50 cursor-pointer group">
+      <summary class="font-bold text-lg text-indigo-700 outline-none list-none [&::-webkit-details-marker]:hidden flex justify-between items-center">
+        Vận dụng 2 <span class="text-indigo-400 group-open:rotate-180 transition-transform">▼</span>
+      </summary>
+      <div class="mt-4 pt-4 border-t border-indigo-50 text-gray-700 font-sans text-sm leading-relaxed cursor-auto">
+        <ul class="list-disc pl-5 space-y-1">
+          <li>Định dạng chữ đậm</li>
+          <li>Định dạng chữ thường</li>
+          <li>Định dạng cỡ chữ</li>
+        </ul>
+      </div>
+    </details>
+  </div>
+</div>
+
+<!-- ====== BÀI 9 ====== -->
+<div id="view-bai-9" class="view-screen py-16 px-4">
+  <div class="max-w-3xl mx-auto relative z-10">
+    <h2 class="text-3xl font-bold text-indigo-900 mb-6 border-b-2 border-indigo-100 pb-4">Nội dung Bài 9</h2>
+    
+    <details class="bg-white p-5 rounded-2xl shadow-sm mb-4 border border-indigo-50 cursor-pointer group">
+      <summary class="font-bold text-lg text-indigo-700 outline-none list-none [&::-webkit-details-marker]:hidden flex justify-between items-center">
+        Luyện tập <span class="text-indigo-400 group-open:rotate-180 transition-transform">▼</span>
+      </summary>
+      <div class="mt-4 pt-4 border-t border-indigo-50 text-gray-700 font-sans text-sm leading-relaxed cursor-auto">
+        <pre class="bg-gray-50 p-3 rounded-lg text-xs font-mono overflow-x-auto">&lt;table style="border-collapse: collapse;"&gt;
+  &lt;tr&gt;
+    &lt;th rowspan="2" style="border: 2px solid blue;"&gt;Họ tên&lt;/th&gt;
+    &lt;th rowspan="3" style="border: 2px solid blue;"&gt;Điểm thi&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td style="border: 2px solid red;"&gt;Toán&lt;/td&gt;
+    &lt;td style="border: 2px solid yellow;"&gt;Vật lí&lt;/td&gt;
+    &lt;td style="border: 2px solid green;"&gt;Hóa học&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;</pre>
+      </div>
+    </details>
+
+    <details class="bg-white p-5 rounded-2xl shadow-sm mb-4 border border-indigo-50 cursor-pointer group">
+      <summary class="font-bold text-lg text-indigo-700 outline-none list-none [&::-webkit-details-marker]:hidden flex justify-between items-center">
+        Vận dụng <span class="text-indigo-400 group-open:rotate-180 transition-transform">▼</span>
+      </summary>
+      <div class="mt-4 pt-4 border-t border-indigo-50 text-gray-700 font-sans text-sm leading-relaxed cursor-auto">
+        <pre class="bg-gray-50 p-3 rounded-lg text-xs font-mono overflow-x-auto">def generate_html_table(data):
+    html_content = "&lt;table style=\"border-collapse: collapse;\"&gt;"
+    # Thêm tiêu đề cho bảng
+    html_content += "&lt;tr&gt;"
+    html_content += "&lt;th style=\"border: 2px solid blue;\"&gt;Họ tên&lt;/th&gt;"
+    html_content += "&lt;th style=\"border: 2px solid blue;\"&gt;Điểm Toán&lt;/th&gt;"
+    html_content += "&lt;th style=\"border: 2px solid blue;\"&gt;Điểm Vật lí&lt;/th&gt;"
+    html_content += "&lt;th style=\"border: 2px solid blue;\"&gt;Điểm Hóa học&lt;/th&gt;"
+    html_content += "&lt;/tr&gt;"
+    # Thêm dữ liệu từ list data vào bảng
+    for row in data:
+        html_content += "&lt;tr&gt;"
+        for value in row:
+            html_content += f"&lt;td style=\"border: 2px solid black;\"&gt;{value}&lt;/td&gt;"
+        html_content += "&lt;/tr&gt;"
+    html_content += "&lt;/table&gt;"
+    return html_content
+
+# Dữ liệu ban đầu
+initial_data = [
+    ["Họ tên", "Điểm Toán", "Điểm Vật lí", "Điểm Hóa học"],
+    ["Nguyễn Văn A", "8.5", "7.0", "9.0"],
+    ["Trần Thị B", "7.0", "8.0", "8.5"]
+]
+
+# Dữ liệu mới cần bổ sung
+new_data = [
+    ["Lê Quang C", "6.5", "7.5", "8.0"],
+    ["Phạm Thị D", "9.0", "8.5", "7.5"]
+]
+
+# Kết hợp dữ liệu cũ và mới
+combined_data = initial_data + new_data
+
+# Tạo nội dung HTML cho bảng dữ liệu
+html_content = generate_html_table(combined_data)
+
+# Lưu nội dung HTML vào tệp
+with open("data_table.html", "w") as file:
+    file.write(html_content)
+
+print("Tạo tệp HTML thành công!")</pre>
+      </div>
+    </details>
+  </div>
+</div>
+
+<!-- ====== BÀI 10 ====== -->
+<div id="view-bai-10" class="view-screen py-16 px-4">
+  <div class="max-w-3xl mx-auto relative z-10">
+    <h2 class="text-3xl font-bold text-indigo-900 mb-6 border-b-2 border-indigo-100 pb-4">Nội dung Bài 10</h2>
+    
+    <details class="bg-white p-5 rounded-2xl shadow-sm mb-4 border border-indigo-50 cursor-pointer group">
+      <summary class="font-bold text-lg text-indigo-700 outline-none list-none [&::-webkit-details-marker]:hidden flex justify-between items-center">
+        Luyện tập 1 <span class="text-indigo-400 group-open:rotate-180 transition-transform">▼</span>
+      </summary>
+      <div class="mt-4 pt-4 border-t border-indigo-50 text-gray-700 font-sans text-sm leading-relaxed cursor-auto">
+        <pre class="bg-gray-50 p-3 rounded-lg text-xs font-mono overflow-x-auto">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Thông tin&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;!-- Nội dung của trang thông tin --&gt;
+    &lt;h1&gt;Thông tin CLB&lt;/h1&gt;
+    &lt;p&gt;Đây là trang thông tin về CLB của chúng ta.&lt;/p&gt;
+    &lt;!-- Liên kết quay về trang chủ --&gt;
+    &lt;a href="CLB.html"&gt;Quay về trang chủ&lt;/a&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+      </div>
+    </details>
+
+    <details class="bg-white p-5 rounded-2xl shadow-sm mb-4 border border-indigo-50 cursor-pointer group">
+      <summary class="font-bold text-lg text-indigo-700 outline-none list-none [&::-webkit-details-marker]:hidden flex justify-between items-center">
+        Luyện tập 2 <span class="text-indigo-400 group-open:rotate-180 transition-transform">▼</span>
+      </summary>
+      <div class="mt-4 pt-4 border-t border-indigo-50 text-gray-700 font-sans text-sm leading-relaxed cursor-auto">
+        <pre class="bg-gray-50 p-3 rounded-lg text-xs font-mono overflow-x-auto">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Giới thiệu bản thân&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Giới thiệu bản thân&lt;/h1&gt;
+    &lt;p&gt;Xin chào! Tôi là [Tên của bạn], đây là một trang web giới thiệu về bản thân tôi.&lt;/p&gt;
+    &lt;h2&gt;Bạn cùng lớp&lt;/h2&gt;
+    &lt;ul&gt;
+        &lt;li&gt;&lt;a href="https://www.facebook.com/friend1" target="_blank"&gt;Facebook của Bạn 1&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="https://www.facebook.com/friend2" target="_blank"&gt;Facebook của Bạn 2&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="https://www.facebook.com/friend3" target="_blank"&gt;Facebook của Bạn 3&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;p&gt;Cảm ơn bạn đã ghé thăm!&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+      </div>
+    </details>
+
+    <details class="bg-white p-5 rounded-2xl shadow-sm mb-4 border border-indigo-50 cursor-pointer group">
+      <summary class="font-bold text-lg text-indigo-700 outline-none list-none [&::-webkit-details-marker]:hidden flex justify-between items-center">
+        Vận dụng <span class="text-indigo-400 group-open:rotate-180 transition-transform">▼</span>
+      </summary>
+      <div class="mt-4 pt-4 border-t border-indigo-50 text-gray-700 font-sans text-sm leading-relaxed cursor-auto">
+        <pre class="bg-gray-50 p-3 rounded-lg text-xs font-mono overflow-x-auto">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Lịch hoạt động công tác CLB thể thao&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Lịch hoạt động công tác CLB thể thao&lt;/h1&gt;
+    &lt;table&gt;
+        &lt;tr&gt;
+            &lt;th&gt;Tên câu lạc bộ&lt;/th&gt;
+            &lt;th&gt;Lịch hoạt động&lt;/th&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;&lt;a href="#club1"&gt;Câu lạc bộ A&lt;/a&gt;&lt;/td&gt;
+            &lt;td&gt;Thứ Hai, Thứ Tư, Thứ Sáu - 18:00 đến 20:00&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;&lt;a href="#club2"&gt;Câu lạc bộ B&lt;/a&gt;&lt;/td&gt;
+            &lt;td&gt;Thứ Ba, Thứ Năm - 16:00 đến 18:00&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/table&gt;
+    &lt;h2 id="club1"&gt;Câu lạc bộ A&lt;/h2&gt;
+    &lt;p&gt;Địa điểm: Sân Bóng XYZ&lt;/p&gt;
+    &lt;p&gt;Thành viên: 50&lt;/p&gt;
+    &lt;p&gt;Thành tích: Đạt giải nhất giải đấu Thể thao X năm 20XX&lt;/p&gt;
+    &lt;p&gt;Phí hội viên: 100.000 đồng/tháng&lt;/p&gt;
+    &lt;p&gt;Điện thoại liên hệ: 0123 456 789&lt;/p&gt;
+    &lt;h2 id="club2"&gt;Câu lạc bộ B&lt;/h2&gt;
+    &lt;p&gt;Địa điểm: Bể Bơi ABC&lt;/p&gt;
+    &lt;p&gt;Thành viên: 30&lt;/p&gt;
+    &lt;p&gt;Thành tích: Huy chương vàng môn bơi lội tại Hội thao Y năm 20XX&lt;/p&gt;
+    &lt;p&gt;Phí hội viên: 150.000 đồng/tháng&lt;/p&gt;
+    &lt;p&gt;Điện thoại liên hệ: 0987 654 321&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+      </div>
+    </details>
+  </div>
+</div>
+
+<!-- ====== BÀI 11 ====== -->
+<div id="view-bai-11" class="view-screen py-16 px-4">
+  <div class="max-w-3xl mx-auto relative z-10">
+    <h2 class="text-3xl font-bold text-indigo-900 mb-6 border-b-2 border-indigo-100 pb-4">Nội dung Bài 11</h2>
+    
+    <details class="bg-white p-5 rounded-2xl shadow-sm mb-4 border border-indigo-50 cursor-pointer group">
+      <summary class="font-bold text-lg text-indigo-700 outline-none list-none [&::-webkit-details-marker]:hidden flex justify-between items-center">
+        Luyện tập 1 <span class="text-indigo-400 group-open:rotate-180 transition-transform">▼</span>
+      </summary>
+      <div class="mt-4 pt-4 border-t border-indigo-50 text-gray-700 font-sans text-sm leading-relaxed cursor-auto">
+        <p>Kích thước của ảnh trong trang web sau khi chèn sẽ được xác định bởi câu lệnh <code>&lt;img&gt;</code> và thuộc tính width mà bạn đã chỉ định (width="600", nghĩa là chiều rộng là 600 pixels).</p>
+        <p class="mt-2">Tuy nhiên, do không chỉ định chiều cao, trình duyệt sẽ tự động điều chỉnh chiều cao theo tỉ lệ kích thước gốc của ảnh.</p>
+        <p class="mt-2">Vậy chiều cao của ảnh trong trang web sẽ là: <strong>375 pixels</strong> (dựa trên tỉ lệ gốc).</p>
+      </div>
+    </details>
+
+    <details class="bg-white p-5 rounded-2xl shadow-sm mb-4 border border-indigo-50 cursor-pointer group">
+      <summary class="font-bold text-lg text-indigo-700 outline-none list-none [&::-webkit-details-marker]:hidden flex justify-between items-center">
+        Luyện tập 2 <span class="text-indigo-400 group-open:rotate-180 transition-transform">▼</span>
+      </summary>
+      <div class="mt-4 pt-4 border-t border-indigo-50 text-gray-700 font-sans text-sm leading-relaxed cursor-auto">
+        <pre class="bg-gray-50 p-3 rounded-lg text-xs font-mono overflow-x-auto">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Giới thiệu bản thân&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Giới thiệu bản thân&lt;/h1&gt;
+    &lt;p&gt;Xin chào! Tôi là [Tên của bạn], đây là một trang web giới thiệu về bản thân tôi.&lt;/p&gt;
+    &lt;h2&gt;Ảnh của tôi&lt;/h2&gt;
+    &lt;img src="path_to_your_image/image1.jpg" alt="Ảnh của bạn"&gt;
+    &lt;img src="path_to_your_image/image2.jpg" alt="Ảnh của bạn"&gt;
+    &lt;img src="path_to_your_image/image3.jpg" alt="Ảnh của bạn"&gt;
+    &lt;h2&gt;Bạn cùng lớp&lt;/h2&gt;
+    &lt;ul&gt;
+        &lt;li&gt;&lt;a href="https://www.facebook.com/friend1" target="_blank"&gt;Facebook của Bạn 1&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="https://www.facebook.com/friend2" target="_blank"&gt;Facebook của Bạn 2&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="https://www.facebook.com/friend3" target="_blank"&gt;Facebook của Bạn 3&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;p&gt;Cảm ơn bạn đã ghé thăm!&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+      </div>
+    </details>
+
+    <details class="bg-white p-5 rounded-2xl shadow-sm mb-4 border border-indigo-50 cursor-pointer group">
+      <summary class="font-bold text-lg text-indigo-700 outline-none list-none [&::-webkit-details-marker]:hidden flex justify-between items-center">
+        Vận dụng <span class="text-indigo-400 group-open:rotate-180 transition-transform">▼</span>
+      </summary>
+      <div class="mt-4 pt-4 border-t border-indigo-50 text-gray-700 font-sans text-sm leading-relaxed cursor-auto">
+        <pre class="bg-gray-50 p-3 rounded-lg text-xs font-mono overflow-x-auto">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Giới thiệu bản thân&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Giới thiệu bản thân&lt;/h1&gt;
+    &lt;p&gt;Xin chào! Tôi là [Tên của bạn], đây là một trang web giới thiệu về bản thân tôi.&lt;/p&gt;
+    &lt;h2&gt;Bài hát yêu thích của tôi&lt;/h2&gt;
+    &lt;iframe width="560" height="315" src="https://www.youtube.com/embed/video_id" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;
+    &lt;h2&gt;Bạn cùng lớp&lt;/h2&gt;
+    &lt;ul&gt;
+        &lt;li&gt;&lt;a href="https://www.facebook.com/friend1" target="_blank"&gt;Facebook của Bạn 1&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="https://www.facebook.com/friend2" target="_blank"&gt;Facebook của Bạn 2&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="https://www.facebook.com/friend3" target="_blank"&gt;Facebook của Bạn 3&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;p&gt;Cảm ơn bạn đã ghé thăm!&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+      </div>
+    </details>
+  </div>
+</div>
+
+
+<!-- ==========================================================================
+     MEMBER 1: TRÂM ANH 
+     ========================================================================== -->
+<div id="view-tram-anh" class="view-screen py-16 px-4">
+  <div class="arcade-cabinet">
+    <div class="scanline"></div>
+    <div class="flex justify-between items-center border-b-2 border-pink-500 pb-4 mb-6">
+      <div class="text-xs text-pink-500 animate-pulse">● INSERT COIN TO PLAY</div>
+      <div class="text-xl text-yellow-400 font-bold">SCORE: 999999</div>
+      <div class="text-xs text-cyan-400">FPS: 60</div>
+    </div>
+    <canvas id="cyberCanvas" class="cyber-canvas mb-6"></canvas>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div class="text-center bg-black/60 border border-cyan-500 p-4 rounded-xl">
+        <img class="w-32 h-32 mx-auto rounded-xl border-2 border-pink-500 shadow-[0_0_15px_#ff007f] object-cover mb-4" src="https://cdn.phototourl.com/member/2026-10-27-1f813a94-b426-486f-84da-19f7addef8b1.jpg" alt="Trâm Anh">
+        <h2 class="text-lg text-white font-bold mb-2" style="font-size: 1.125rem;">TRÂM ANH</h2>
+        <span class="bg-pink-600 text-white text-[10px] px-2 py-1 rounded uppercase">ROLE: THÀNH VIÊN</span>
+      </div>
+      <div class="md:col-span-2 text-xs leading-relaxed space-y-3 bg-black/80 border border-yellow-500 p-5 rounded-xl font-sans">
+        <div class="text-yellow-400 font-bold border-b border-yellow-700 pb-2">✦ CHARACTER OVERVIEW [LV.99 MAX]</div>
+        <div class="flex justify-between"><span class="text-cyan-400 font-bold">Họ và tên:</span> <span class="text-white">Đặng Nhựt Trâm Anh</span></div>
+        <div class="flex justify-between"><span class="text-cyan-400 font-bold">Ngày sinh:</span> <span class="text-white">07/09/2009</span></div>
+        <div class="flex justify-between"><span class="text-cyan-400 font-bold">Class / Nghề:</span> <span class="text-pink-400 font-bold">Răng Hàm Mặt</span></div>
+        <div class="flex justify-between"><span class="text-cyan-400 font-bold">Tính cách (Buff):</span> <span class="text-white">Hướng nội (+50 Focus) - Cầu toàn (+100 Precision)</span></div>
+        <div class="flex justify-between"><span class="text-cyan-400 font-bold">Mục tiêu Quest:</span> <span class="text-yellow-300 font-bold">Kiếm nhiều tiền 💰</span></div>
+        <div class="flex justify-between"><span class="text-cyan-400 font-bold">Sở thích:</span> <span class="text-white">Chơi game 🎮 - Âm nhạc 🎧</span></div>
+      </div>
+    </div>
+    <div class="mt-8 pt-6 border-t-2 border-cyan-500 flex flex-wrap justify-between items-center gap-4">
+      <div class="flex gap-3">
+        <button class="arcade-btn bg-red-600 text-white" onclick="triggerCyberSound(261.63)">A</button>
+        <button class="arcade-btn bg-blue-600 text-white" onclick="triggerCyberSound(329.63)">B</button>
+        <button class="arcade-btn bg-yellow-500 text-black" onclick="triggerCyberSound(392.00)">X</button>
+        <button class="arcade-btn bg-green-600 text-white" onclick="triggerCyberSound(523.25)">Y</button>
+      </div>
+      <div class="text-[10px] text-pink-400 animate-pulse">PRESS BUTTONS FOR RETRO AUDIO SYNTH 🔊</div>
+    </div>
+  </div>
+</div>
+
+<!-- ==========================================================================
+     MEMBER 2: HỒNG GIANG
+     ========================================================================== -->
+<div id="view-hong-giang" class="view-screen py-16 px-4">
+  <div class="projector-beam"></div>
+  <div class="max-w-4xl mx-auto relative z-10">
+    <div class="text-center mb-6">
+      <span class="text-xs tracking-[0.3em] text-yellow-500 uppercase border-b border-yellow-600 pb-1">CINEMA PREMIERE SHOWCASE</span>
+      <h2 class="text-4xl md:text-5xl font-extrabold text-amber-200 mt-3" style="font-size: 2.25rem; font-weight: 800;">LÊ VÕ HỒNG GIANG</h2>
+      <p class="text-xs text-amber-500 uppercase tracking-widest mt-1">THÀNH VIÊN • DIRECTOR'S CUT</p>
+    </div>
+    <div class="film-canvas-wrap p-6 md:p-8">
+      <canvas id="filmCanvas" class="w-full h-40 bg-zinc-950 rounded-lg mb-6"></canvas>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 items-center">
+        <div class="relative group">
+          <div class="w-44 h-56 mx-auto rounded-lg overflow-hidden border-2 border-amber-500 shadow-2xl relative">
+            <img class="w-full h-full object-cover" src="https://cdn.phototourl.com/member/2026-10-27-4debf0bf-0907-4c33-a069-8fbad011e54f.jpg" alt="Hồng Giang">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+          </div>
+        </div>
+        <div class="md:col-span-2 space-y-4 font-sans text-sm bg-stone-900/90 border border-amber-900/60 p-6 rounded-xl text-amber-100">
+          <div class="text-xs font-serif text-amber-400 tracking-widest uppercase border-b border-amber-800 pb-2 flex justify-between">
+            <span>GOLDEN TICKET #200924</span>
+            <span>RẠP FILM LỚP 12S</span>
+          </div>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div><span class="text-amber-500 text-xs uppercase block font-bold">Họ và tên</span><span class="text-base font-semibold">Lê Võ Hồng Giang</span></div>
+            <div><span class="text-amber-500 text-xs uppercase block font-bold">Ngày sinh</span><span class="text-base font-semibold">24/12/2009</span></div>
+            <div><span class="text-amber-500 text-xs uppercase block font-bold">Định hướng nghề nghiệp</span><span class="text-base font-semibold text-amber-300">Công nghệ sinh học</span></div>
+            <div><span class="text-amber-500 text-xs uppercase block font-bold">Tính cách</span><span class="text-base font-semibold">Năng động - sâu sắc</span></div>
+            <div><span class="text-amber-500 text-xs uppercase block font-bold">Mục tiêu phát triển</span><span class="text-base font-semibold text-yellow-400">Phát triển bản thân</span></div>
+            <div><span class="text-amber-500 text-xs uppercase block font-bold">Sở thích điện ảnh</span><span class="text-base font-semibold">Xem phim 🍿🎬</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ==========================================================================
+     MEMBER 3: KHÁNH NGỌC 
+     ========================================================================== -->
+<div id="view-khanh-ngoc" class="view-screen py-16 px-4">
+  <div class="flash-overlay" id="flashOverlay"></div>
+  <div class="max-w-2xl mx-auto text-center relative z-10">
+    <h2 class="text-5xl font-bold text-gray-800 mb-2" style="font-size: 3rem; font-weight: bold;">Phan Hoàng Khánh Ngọc</h2>
+    <p class="text-xl text-rose-500 font-bold mb-6">Thành viên • Vintage Photo Studio</p>
+    <div class="bg-white border-2 border-pink-300 p-6 rounded-3xl shadow-xl inline-block mb-8">
+      <button onclick="snapPolaroid()" class="bg-gradient-to-r from-rose-400 to-pink-500 text-white font-sans text-sm font-bold px-8 py-3 rounded-full hover:scale-105 active:scale-95 transition shadow-lg flex items-center gap-2 mx-auto">
+        📸 <span>Bấm Chụp Polaroid Flash!</span>
+      </button>
+    </div>
+    <div id="polaroidContainer" class="hidden">
+      <div class="polaroid-eject inline-block bg-white p-5 pb-8 shadow-2xl rounded-sm border border-gray-200 max-w-sm">
+        <img class="w-72 h-72 object-cover rounded shadow-inner mb-4" src="https://cdn.phototourl.com/member/2026-11-10-c1a6d8b1-3d73-41ea-b5c8-b380c714c705.jpg" alt="Khánh Ngọc">
+        <div class="text-3xl font-bold text-gray-800" style="font-size: 1.875rem;">Khánh Ngọc ✨</div>
+        <p class="text-sm text-gray-500 font-sans mt-1">Captured on 27/10/2009</p>
+        <div class="mt-6 text-left font-sans text-xs text-gray-700 space-y-2 bg-pink-50/80 p-4 rounded-lg border border-pink-200">
+          <div><strong class="text-rose-600">Họ và tên:</strong> Phan Hoàng Khánh Ngọc</div>
+          <div><strong class="text-rose-600">Ngày sinh:</strong> 27/10/2009</div>
+          <div><strong class="text-rose-600">Nghề nghiệp mơ ước:</strong> Y tế sức khoẻ 🩺</div>
+          <div><strong class="text-rose-600">Tính cách:</strong> Vui tính - Tình cảm</div>
+          <div><strong class="text-rose-600">Mục tiêu:</strong> Hoàn thiện bản thân</div>
+          <div><strong class="text-rose-600">Sở thích:</strong> Âm nhạc 🎵 - Chụp hình 📸</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ==========================================================================
+     MEMBER 4: BẢO LINH
+     ========================================================================== -->
+<div id="view-bao-linh" class="view-screen py-16 px-4">
+  <canvas id="artCanvas"></canvas>
+  <div class="max-w-2xl mx-auto text-center relative z-10 pointer-events-none">
+    <div class="bg-slate-900/80 backdrop-blur-xl border border-indigo-500/40 p-8 rounded-3xl shadow-2xl pointer-events-auto">
+      <div class="w-32 h-32 mx-auto rounded-full overflow-hidden border-4 border-indigo-400 shadow-2xl mb-4">
+        <img class="w-full h-full object-cover" src="https://cdn.phototourl.com/member/2026-10-27-7422e723-5a0d-41f2-9ffe-2bfdc0b277fc.jpg" alt="Bảo Linh">
+      </div>
+      <h2 class="text-4xl font-bold text-indigo-200 mb-1" style="font-size: 2.25rem;">ĐẶNG BẢO LINH</h2>
+      <span class="inline-block bg-indigo-500/20 text-indigo-300 border border-indigo-400/40 px-4 py-1 rounded-full text-xs font-bold uppercase mb-6 tracking-widest">
+        THÀNH VIÊN
+      </span>
+      <div class="text-left font-sans text-sm space-y-3 bg-indigo-950/60 p-6 rounded-2xl border border-indigo-800/60 text-slate-200">
+        <div class="flex justify-between border-b border-indigo-800/40 pb-2"><span class="text-indigo-400 font-bold">🎨 Họ và tên:</span><span>Đặng Bảo Linh</span></div>
+        <div class="flex justify-between border-b border-indigo-800/40 pb-2"><span class="text-indigo-400 font-bold">☁️ Ngày sinh:</span><span>03/08/2009</span></div>
+        <div class="flex justify-between border-b border-indigo-800/40 pb-2"><span class="text-indigo-400 font-bold">🩺 Định hướng nghề nghiệp:</span><span class="text-indigo-300 font-semibold">Điều dưỡng</span></div>
+        <div class="flex justify-between border-b border-indigo-800/40 pb-2"><span class="text-indigo-400 font-bold">✨ Tính cách:</span><span>Sáng tạo - Tự tin</span></div>
+        <div class="flex justify-between border-b border-indigo-800/40 pb-2"><span class="text-indigo-400 font-bold">🎯 Mục tiêu:</span><span>Hoàn thiện bản thân - Tích luỹ kinh nghiệm</span></div>
+        <div class="flex justify-between"><span class="text-indigo-400 font-bold">🌙 Sở thích:</span><span class="text-yellow-300 font-semibold">Vẽ tranh - Ngủ - Lướt TikTok</span></div>
+      </div>
+      <div class="mt-6 text-xs text-indigo-300 font-sans italic">
+        🖌️ *Tip: Rê chuột / Vuốt ngón tay trực tiếp trên màn hình để vẽ dải màu nghệ thuật!*
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ==========================================================================
+     MEMBER 5: PHÚC KHANG
+     ========================================================================== -->
+<div id="view-phuc-khang" class="view-screen py-16 px-4">
+  <canvas id="bioCanvas"></canvas>
+  <div class="max-w-2xl mx-auto relative z-10">
+    <div class="bg-emerald-950/85 backdrop-blur-xl border-2 border-emerald-500/50 p-8 rounded-3xl shadow-[0_0_50px_rgba(16,185,129,0.2)]">
+      <div class="flex items-center justify-between border-b border-emerald-800/80 pb-4 mb-6">
+        <div>
+          <span class="bg-emerald-500 text-black text-xs font-bold px-3 py-1 rounded-full uppercase">👑 TRƯỞNG NHÓM</span>
+          <h2 class="text-3xl font-bold text-white mt-2" style="font-size: 1.875rem;">NGUYỄN TỐNG PHÚC KHANG</h2>
+        </div>
+        <img class="w-24 h-24 rounded-2xl object-cover border-2 border-emerald-400 shadow-xl" src="https://cdn.phototourl.com/member/2026-10-27-ca7e1593-30fe-403a-8821-c168596a6f12.jpg" alt="Phúc Khang">
+      </div>
+      <div class="bg-black/60 border border-emerald-800 p-6 rounded-2xl mb-6">
+        <div class="text-xs text-emerald-400 font-bold uppercase mb-3">🎸 ACOUSTIC GUITAR SOUNDBOARD (GẢY DÂY ĐÀN)</div>
+        <div class="space-y-3">
+          <div class="h-2 bg-gradient-to-r from-emerald-600 via-emerald-400 to-emerald-600 rounded cursor-pointer hover:scale-y-150 transition" onclick="pluckGuitarString(196)"></div>
+          <div class="h-2 bg-gradient-to-r from-emerald-600 via-emerald-400 to-emerald-600 rounded cursor-pointer hover:scale-y-150 transition" onclick="pluckGuitarString(246.94)"></div>
+          <div class="h-2 bg-gradient-to-r from-emerald-600 via-emerald-400 to-emerald-600 rounded cursor-pointer hover:scale-y-150 transition" onclick="pluckGuitarString(329.63)"></div>
+        </div>
+      </div>
+      <div class="space-y-3 font-sans text-sm bg-emerald-900/30 p-6 rounded-2xl border border-emerald-700/40 text-emerald-100">
+        <div class="flex justify-between border-b border-emerald-800/60 pb-2"><span class="text-emerald-400 font-bold">🌱 Họ và tên:</span><span>Nguyễn Tống Phúc Khang</span></div>
+        <div class="flex justify-between border-b border-emerald-800/60 pb-2"><span class="text-emerald-400 font-bold">🎂 Ngày sinh:</span><span>25/12/2009</span></div>
+        <div class="flex justify-between border-b border-emerald-800/60 pb-2"><span class="text-emerald-400 font-bold">🔬 Định hướng nghề nghiệp:</span><span class="text-emerald-300 font-semibold">Sinh học</span></div>
+        <div class="flex justify-between border-b border-emerald-800/60 pb-2"><span class="text-emerald-400 font-bold">🔥 Tính cách:</span><span>Hoạt bát - Nhiệt tình</span></div>
+        <div class="flex justify-between border-b border-emerald-800/60 pb-2"><span class="text-emerald-400 font-bold">📈 Mục tiêu:</span><span>Cải thiện bản thân</span></div>
+        <div class="flex justify-between"><span class="text-emerald-400 font-bold">🎵 Sở thích:</span><span class="text-emerald-200">Âm nhạc (Guitar 🎸) - Môn Sinh 🧬</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+const searchInput = document.getElementById('searchInput');
+const assignmentCards = [...document.querySelectorAll('.assignment')];
+const emptyState = document.getElementById('emptyState');
+const normalizeText = value => value.normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLocaleLowerCase('vi').trim();
+
+function filterAssignments() {
+  const query = normalizeText(searchInput.value);
+  let visibleCount = 0;
+  assignmentCards.forEach(card => {
+    const title = card.dataset.title || '';
+    const h3Text = card.querySelector('h3') ? card.querySelector('h3').textContent : '';
+    const pText = card.querySelector('p') ? card.querySelector('p').textContent : '';
+    const fullContent = normalizeText(`${title} ${h3Text} ${pText}`);
+    const matches = fullContent.includes(query);
+    card.hidden = !matches;
+    if (matches) visibleCount++;
+  });
+  emptyState.style.display = visibleCount ? 'none' : 'block';
+}
+
+if (searchInput) {
+  searchInput.addEventListener('input', filterAssignments);
+  searchInput.addEventListener('search', filterAssignments);
+  filterAssignments();
+}
+
+let activeCanvasAnimation = null;
+let currentActiveView = 'home';
+
+function stopCanvasAnimation() {
+  if (activeCanvasAnimation) {
+    cancelAnimationFrame(activeCanvasAnimation);
+    activeCanvasAnimation = null;
+  }
+}
+
+function showMemberView(viewId, updateHash = true) {
+  stopCanvasAnimation();
+  currentActiveView = viewId;
+  
+  // Bật class điều khiển nút Quay lại trên <body>
+  document.body.classList.add('is-member-view');
+
+  const views = document.querySelectorAll('.view-screen');
+  views.forEach(v => v.classList.remove('active'));
+  const targetView = document.getElementById(viewId);
+  if (targetView) {
+    targetView.classList.add('active');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    
+    if (updateHash) {
+      history.pushState({ view: viewId }, '', '#' + viewId);
+    }
+
+    requestAnimationFrame(() => {
+      if (viewId === 'view-tram-anh') initCyberCanvas();
+      if (viewId === 'view-hong-giang') initFilmCanvas();
+      if (viewId === 'view-khanh-ngoc') autoSnapPolaroid();
+      if (viewId === 'view-bao-linh') initArtCanvas();
+      if (viewId === 'view-phuc-khang') initBioCanvas();
+    });
+  }
+}
+
+function showHomeView(updateHash = true) {
+  stopCanvasAnimation();
+  currentActiveView = 'home';
+
+  // Tắt class điều khiển nút Quay lại trên <body> khi về Trang chủ
+  document.body.classList.remove('is-member-view');
+
+  const views = document.querySelectorAll('.view-screen');
+  views.forEach(v => v.classList.remove('active'));
+  const homeView = document.getElementById('view-home');
+  if (homeView) homeView.classList.add('active');
+  
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+  
+  if (updateHash) {
+    history.pushState({ view: 'home' }, '', window.location.pathname + window.location.search);
+  }
+}
+
+// Lắng nghe thay đổi Router/Hash để tự động chuyển trang chính xác
+function handleRoute() {
+  const hash = window.location.hash.replace('#', '');
+  if (hash && document.getElementById(hash) && hash.startsWith('view-')) {
+    showMemberView(hash, false);
+  } else {
+    showHomeView(false);
+    if (hash && document.getElementById(hash)) {
+      const el = document.getElementById(hash);
+      if (el) el.scrollIntoView({ behavior: 'smooth' });
+    }
+  }
+}
+
+window.addEventListener('popstate', handleRoute);
+window.addEventListener('hashchange', handleRoute);
+window.addEventListener('load', handleRoute);
+
+// Web Audio API helper: Tự động khởi tạo & khôi phục AudioContext khi bị suspended
+let audioCtx;
+function getAudioContext() {
+  if (!audioCtx) {
+    audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+  }
+  if (audioCtx.state === 'suspended') {
+    audioCtx.resume();
+  }
+  return audioCtx;
+}
+
+// Trâm Anh: Audio Visualizer & Sound Synth
+function triggerCyberSound(freq) {
+  try {
+    const ctx = getAudioContext();
+    const osc = ctx.createOscillator();
+    const gain = ctx.createGain();
+    osc.type = 'square';
+    osc.frequency.setValueAtTime(freq, ctx.currentTime);
+    gain.gain.setValueAtTime(0.1, ctx.currentTime);
+    gain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + 0.3);
+    osc.connect(gain);
+    gain.connect(ctx.destination);
+    osc.start();
+    osc.stop(ctx.currentTime + 0.3);
+  } catch(e) {}
+}
+
+function initCyberCanvas() {
+  const cvs = document.getElementById('cyberCanvas');
+  if (!cvs) return;
+  const ctx = cvs.getContext('2d');
+  cvs.width = cvs.clientWidth || 800;
+  cvs.height = cvs.clientHeight || 180;
+  let bars = Array.from({length: 30}, () => Math.random() * cvs.height);
+  function draw() {
+    ctx.fillStyle = 'rgba(0, 0, 0, 0.2)';
+    ctx.fillRect(0, 0, cvs.width, cvs.height);
+    const barWidth = cvs.width / bars.length;
+    bars.forEach((h, i) => {
+      bars[i] += (Math.random() - 0.5) * 15;
+      bars[i] = Math.max(10, Math.min(cvs.height - 10, bars[i]));
+      ctx.fillStyle = i % 2 === 0 ? '#ff007f' : '#00ffcc';
+      ctx.fillRect(i * barWidth, cvs.height - bars[i], barWidth - 2, bars[i]);
+    });
+    activeCanvasAnimation = requestAnimationFrame(draw);
+  }
+  draw();
+}
+
+// Hồng Giang: Film Canvas
+function initFilmCanvas() {
+  const cvs = document.getElementById('filmCanvas');
+  if (!cvs) return;
+  const ctx = cvs.getContext('2d');
+  cvs.width = cvs.clientWidth || 800;
+  cvs.height = cvs.clientHeight || 160;
+  let offset = 0;
+  function draw() {
+    ctx.clearRect(0, 0, cvs.width, cvs.height);
+    offset = (offset + 1.5) % 80;
+    ctx.fillStyle = '#d4af37';
+    for (let x = -offset; x < cvs.width; x += 80) {
+      ctx.fillRect(x + 10, 10, 40, 25);
+      ctx.fillRect(x + 10, cvs.height - 35, 40, 25);
+      ctx.strokeStyle = '#444';
+      ctx.strokeRect(x, 0, 80, cvs.height);
+    }
+    activeCanvasAnimation = requestAnimationFrame(draw);
+  }
+  draw();
+}
+
+// Khánh Ngọc: Polaroid 
+function snapPolaroid() {
+  const flash = document.getElementById('flashOverlay');
+  const container = document.getElementById('polaroidContainer');
+  if (flash) {
+    flash.style.opacity = '1';
+    setTimeout(() => { flash.style.opacity = '0'; }, 150);
+  }
+  if (container) container.classList.remove('hidden');
+}
+function autoSnapPolaroid() {
+  setTimeout(() => snapPolaroid(), 300);
+}
+
+// Bảo Linh: Painting Canvas
+let artCanvasInitialized = false;
+function initArtCanvas() {
+  const cvs = document.getElementById('artCanvas');
+  if (!cvs) return;
+  const ctx = cvs.getContext('2d');
+  
+  function resizeArtCanvas() {
+    cvs.width = window.innerWidth;
+    cvs.height = window.innerHeight;
+  }
+  resizeArtCanvas();
+
+  let drawing = false;
+  const colors = ['#a855f7', '#6366f1', '#ec4899', '#38bdf8', '#facc15'];
+
+  function drawStroke(x, y) {
+    const rect = cvs.getBoundingClientRect();
+    const canvasX = x - rect.left;
+    const canvasY = y - rect.top;
+    ctx.beginPath();
+    ctx.arc(canvasX, canvasY, 12, 0, Math.PI * 2);
+    ctx.fillStyle = colors[Math.floor(Math.random() * colors.length)];
+    ctx.shadowBlur = 15;
+    ctx.shadowColor = ctx.fillStyle;
+    ctx.fill();
+  }
+
+  if (!artCanvasInitialized) {
+    artCanvasInitialized = true;
+    cvs.addEventListener('mousedown', () => { drawing = true; });
+    window.addEventListener('mouseup', () => { drawing = false; });
+    cvs.addEventListener('mousemove', (e) => {
+      if (drawing) drawStroke(e.clientX, e.clientY);
+    });
+    cvs.addEventListener('touchstart', (e) => {
+      drawing = true;
+      if (e.touches.length > 0) drawStroke(e.touches[0].clientX, e.touches[0].clientY);
+    }, { passive: true });
+    cvs.addEventListener('touchend', () => { drawing = false; });
+    cvs.addEventListener('touchmove', (e) => {
+      if (drawing && e.touches.length > 0) {
+        drawStroke(e.touches[0].clientX, e.touches[0].clientY);
+      }
+    }, { passive: true });
+  }
+}
+
+// Phúc Khang: Bio & Guitar
+function pluckGuitarString(freq) {
+  try {
+    const ctx = getAudioContext();
+    const osc = ctx.createOscillator();
+    const gain = ctx.createGain();
+    osc.type = 'triangle';
+    osc.frequency.setValueAtTime(freq, ctx.currentTime);
+    gain.gain.setValueAtTime(0.2, ctx.currentTime);
+    gain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + 0.8);
+    osc.connect(gain);
+    gain.connect(ctx.destination);
+    osc.start();
+    osc.stop(ctx.currentTime + 0.8);
+  } catch(e) {}
+}
+
+function initBioCanvas() {
+  const cvs = document.getElementById('bioCanvas');
+  if (!cvs) return;
+  const ctx = cvs.getContext('2d');
+  cvs.width = window.innerWidth;
+  cvs.height = window.innerHeight;
+  let t = 0;
+  function draw() {
+    ctx.fillStyle = 'rgba(6, 18, 11, 0.2)';
+    ctx.fillRect(0, 0, cvs.width, cvs.height);
+    t += 0.03;
+    for (let x = 0; x < cvs.width; x += 30) {
+      const y1 = cvs.height / 2 + Math.sin(x * 0.01 + t) * 60;
+      const y2 = cvs.height / 2 - Math.sin(x * 0.01 + t) * 60;
+      ctx.beginPath();
+      ctx.arc(x, y1, 4, 0, Math.PI * 2);
+      ctx.fillStyle = '#10b981';
+      ctx.fill();
+      ctx.beginPath();
+      ctx.arc(x, y2, 4, 0, Math.PI * 2);
+      ctx.fillStyle = '#34d399';
+      ctx.fill();
+      if (x % 60 === 0) {
+        ctx.beginPath();
+        ctx.moveTo(x, y1);
+        ctx.lineTo(x, y2);
+        ctx.strokeStyle = 'rgba(16, 185, 129, 0.2)';
+        ctx.stroke();
+      }
+    }
+    activeCanvasAnimation = requestAnimationFrame(draw);
+  }
+  draw();
+}
+
+window.addEventListener('resize', () => {
+  if (currentActiveView === 'view-tram-anh') initCyberCanvas();
+  if (currentActiveView === 'view-hong-giang') initFilmCanvas();
+  if (currentActiveView === 'view-bao-linh') initArtCanvas();
+  if (currentActiveView === 'view-phuc-khang') initBioCanvas();
+});
+</script>
+</body>
+</html>
